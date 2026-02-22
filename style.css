@@ -29,7 +29,6 @@ body{
   color: var(--text);
   line-height: 1.55;
 
-  /* фон ближе к скрину */
   background:
     radial-gradient(1200px 700px at 50% -180px, rgba(255,255,255,.08) 0%, rgba(255,255,255,0) 55%),
     radial-gradient(900px 520px at 50% 120px, rgba(150,100,255,.08) 0%, rgba(150,100,255,0) 60%),
@@ -55,7 +54,7 @@ a{ color: inherit; text-decoration:none; }
 .nav-pill{
   display:flex;
   gap: 8px;
-  padding: 0;
+  padding: 2;
   background: #363636;
   border: 0;
   border-radius: 0;
@@ -83,7 +82,6 @@ a{ color: inherit; text-decoration:none; }
   align-items:center;
   text-align:center;
 
-  /* как на скрине: 80px от nav до аватара */
   margin-top: 80px;
 }
 .avatar{
@@ -91,7 +89,7 @@ a{ color: inherit; text-decoration:none; }
   height: 86px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 32px; /* как на скрине: 32 до заголовка */
+  margin-bottom: 32px;
 }
 
 .h1{
@@ -122,13 +120,13 @@ a{ color: inherit; text-decoration:none; }
 .inline-tag.express{
   color: var(--c-express);
   background: rgba(127,157,224,.16);
-  border: 0;                 /* на всякий */
-  font-weight: 700;          /* bold */
+  border: 0;                 
+  font-weight: 700;        
 }
 
 /* WORK SECTION */
 .section{
-  margin-top: 100px;   /* было 120 */
+  margin-top: 100px;  
 }
 
 .cards{
