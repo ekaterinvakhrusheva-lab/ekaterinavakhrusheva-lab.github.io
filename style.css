@@ -1,8 +1,8 @@
 :root{
   --bg:#121212;
   --text:#F2F2F2;
-  --muted:#B7B7B7;
-  --muted-2:#8F8F8F;
+  --muted:#B3B3B3;
+  --muted-2:#777777;
 
   --surface: rgba(255,255,255,.06);
   --surface-2: rgba(255,255,255,.04);
@@ -17,8 +17,8 @@
 
   /* проектные цвета (для hover градиентов и лейблов) */
   --c-express: #7F9DE0;
-  --c-alfa: #FF5A66;
-  --c-raif: #F2C94C;
+  --c-alfa: #FE4851;
+  --c-raif: #F5E335;
 }
 
 *{ box-sizing:border-box; }
@@ -56,7 +56,7 @@ a{ color: inherit; text-decoration:none; }
   display:flex;
   gap: 8px;
   padding: 0;
-  background: transparent;
+  background: #363636;
   border: 0;
   border-radius: 0;
   backdrop-filter: none;
