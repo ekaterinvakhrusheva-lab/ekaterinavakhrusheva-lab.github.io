@@ -208,16 +208,15 @@ a{ color: inherit; text-decoration:none; }
   margin-bottom: 10px;
   letter-spacing: -0.01em;
 }
-.badge .icon{
-  width: 18px;
-  height: 18px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border-radius: 6px;
-  border: 1px solid rgba(255,255,255,.14);
+/* project icon image inside badge */
+.icon-img{
+  width: 24px;
+  height: 24px;
+  display:inline-block;
+  vertical-align: middle;
+  /* если иконки прозрачные, а хочется "плашку" как раньше — оставь */
   background: rgba(255,255,255,.08);
-  font-size: 12px;
+  padding: 2px;
 }
 
 /* цвет названия проекта */
