@@ -214,9 +214,6 @@ a{ color: inherit; text-decoration:none; }
   height: 24px;
   display:inline-block;
   vertical-align: middle;
-  /* если иконки прозрачные, а хочется "плашку" как раньше — оставь */
-  background: rgba(255,255,255,.08);
-  padding: 2px;
 }
 
 /* цвет названия проекта */
@@ -242,8 +239,6 @@ a{ color: inherit; text-decoration:none; }
   height: 230px;
   object-fit: cover;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.03);
 }
 
 /* CTA */
