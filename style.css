@@ -92,6 +92,10 @@ a{ color: inherit; text-decoration:none; }
   background: rgba(150,100,255,.32);
   color: #ffffff;
 }
+/* чтобы при переходе по якорям заголовок не уезжал под sticky nav */
+#about, #work, #contact{
+  scroll-margin-top: 110px;
+}
 
 /* HERO */
 .hero{
