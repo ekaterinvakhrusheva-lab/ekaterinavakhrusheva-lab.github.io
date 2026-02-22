@@ -52,7 +52,6 @@ a{ color: inherit; text-decoration:none; }
   display:flex;
   justify-content:center;
 
-  /* чтобы при прилипании не выглядело "прижатым" */
   padding-top: 10px;
   padding-bottom: 10px;
   background: transparent;
@@ -62,7 +61,7 @@ a{ color: inherit; text-decoration:none; }
 .nav-pill{
   display:flex;
   gap: 6px;
-  padding: 8px;
+  padding: 6px;
   border-radius: 999px;
 
   border: 0;
@@ -92,7 +91,7 @@ a{ color: inherit; text-decoration:none; }
 }
 /* чтобы при переходе по якорям заголовок не уезжал под sticky nav */
 #about, #work, #contact{
-  scroll-margin-top: 110px;
+  scroll-margin-top: 80px;
 }
 
 /* HERO */
