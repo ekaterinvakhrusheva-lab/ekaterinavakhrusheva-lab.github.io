@@ -7,42 +7,98 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="container">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-pill">
+        <a class="active" href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
 
-    <h1>Ekaterina Vakhrusheva</h1>
+    <header id="about" class="hero">
+      <img class="avatar" src="assets/avatar.jpg" alt="Avatar" />
+      <h1 class="h1">Hi! I’m Ekaterina Vakhrusheva</h1>
+      <p class="lead">
+        I design scalable B2B & B2C products with a focus on complex systems, usability, and measurable impact.
+        Currently working as a Product Designer at <a href="https://express.ms/en/" target="_blank" rel="noreferrer">eXpress</a>.
+      </p>
+    </header>
 
-    <p>
-      Product Designer · 3+ years · B2C & Enterprise
-    </p>
+    <section id="work" class="section">
+      <div class="cards">
 
-    <p>
-      Designing complex systems with measurable impact.
-      Based in Israel · Open to relocation (EU / AU / NZ)
-    </p>
+        <a class="card" href="express.html" aria-label="Open eXpress case study">
+          <div class="card-top">
+            <div class="badge"><span class="dot"></span> eXpress</div>
+            <p>
+              Redesigned enterprise communication platform (2M+ users) with messaging, calls, and collaboration tools.
+            </p>
+          </div>
+          <div class="card-media">
+            <img src="assets/cover-express.png" alt="eXpress cover" />
+          </div>
+        </a>
 
-    <h2>Selected Projects</h2>
+        <a class="card" href="alfa.html" aria-label="Open Alfa Digital case study">
+          <div class="card-top">
+            <div class="badge"><span class="dot"></span> Alfa Digital</div>
+            <p>
+              Redesigned Alfa Digital’s website (+33% conversion), the internal HR platform of one of the largest private banks in Eastern Europe.
+            </p>
+          </div>
+          <div class="card-media">
+            <img src="assets/cover-alfa.png" alt="Alfa Digital cover" />
+          </div>
+        </a>
 
-    <ul>
-      <li>
-        <strong>eXpress</strong> — Enterprise communication platform redesign  
-        (NPS: -19.9 → +14 · Task success: 91%)
-      </li>
-      <li>
-        <strong>Alfa Digital</strong> — Recruitment platform redesign  
-        (+33% completion rate)
-      </li>
-      <li>
-        <strong>Raiffeisen Invest</strong> — Research-driven UX audit  
-        (+60% retention impact)
-      </li>
-    </ul>
+        <a class="card" href="raiffeisen.html" aria-label="Open Raiffeisen Invest case study">
+          <div class="card-top">
+            <div class="badge"><span class="dot"></span> Raiffeisen Invest</div>
+            <p>
+              Conducted a research-driven UX audit of the Raiffeisen Invest app to uncover friction points for novice investors.
+            </p>
+          </div>
+          <div class="card-media">
+            <img src="assets/cover-raiffeisen.png" alt="Raiffeisen Invest cover" />
+          </div>
+        </a>
 
-    <p style="margin-top:48px;">
-      <a href="mailto:ekaterin.vakhrusheva@gmail.com">Contact me</a>
-      ·
-      <a href="https://www.linkedin.com/in/ekaterina-vakhrusheva" target="_blank">LinkedIn</a>
-    </p>
+      </div>
+    </section>
 
-  </main>
+    <section id="contact" class="cta">
+      <h2>Let’s work on meaningful products together!</h2>
+      <p>
+        Connect with me on
+        <a href="https://www.linkedin.com/in/ekaterina-vakhrusheva" target="_blank" rel="noreferrer">LinkedIn</a>,
+        send a message to my
+        <a href="mailto:ekaterin.vakhrusheva@gmail.com">email</a>
+        or check my experience in my <a href="#" title="Add CV link later">CV</a>.
+      </p>
+    </section>
+
+    <div class="footer">
+      Designed and coded by Ekaterina Vakhrusheva · 2026
+    </div>
+  </div>
+
+  <script>
+    // Highlight active nav item on scroll (lightweight)
+    const sections = ["about","work","contact"].map(id => document.getElementById(id));
+    const links = Array.from(document.querySelectorAll(".nav-pill a"));
+
+    const setActive = (hash) => {
+      links.forEach(a => a.classList.toggle("active", a.getAttribute("href") === hash));
+    };
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) setActive("#" + e.target.id);
+      });
+    }, { rootMargin: "-45% 0px -45% 0px", threshold: 0.01 });
+
+    sections.forEach(s => obs.observe(s));
+  </script>
 </body>
 </html>
