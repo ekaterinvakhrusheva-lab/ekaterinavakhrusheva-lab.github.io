@@ -87,8 +87,8 @@ a{ color: inherit; text-decoration:none; }
   margin-top: 80px;
 }
 .avatar{
-  width: 76px;
-  height: 76px;
+  width: 86px;
+  height: 86px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 32px; /* как на скрине: 32 до заголовка */
