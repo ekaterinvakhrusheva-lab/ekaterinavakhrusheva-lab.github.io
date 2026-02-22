@@ -19,18 +19,23 @@
     <header id="about" class="hero">
       <img class="avatar" src="assets/avatar.jpg" alt="Avatar" />
       <h1 class="h1">Hi! I’m Ekaterina Vakhrusheva</h1>
+
       <p class="lead">
-        I design scalable B2B & B2C products with a focus on complex systems, usability, and measurable impact.
-        Currently working as a Product Designer at <a href="https://express.ms/en/" target="_blank" rel="noreferrer">eXpress</a>.
+        I design scalable B2B &amp; B2C products with a focus on complex systems, usability, and measurable impact.
+        Currently working as a <span class="hl-white">Product Designer</span> at
+        <a class="inline-tag express" href="https://express.ms/en/" target="_blank" rel="noreferrer">eXpress</a>.
       </p>
     </header>
 
     <section id="work" class="section">
       <div class="cards">
 
-        <a class="card" href="express.html" aria-label="Open eXpress case study">
+        <a class="card express" href="express.html" aria-label="Open eXpress case study">
           <div class="card-top">
-            <div class="badge"><span class="dot"></span> eXpress</div>
+            <div class="badge express">
+              <span class="icon">💬</span>
+              eXpress
+            </div>
             <p>
               Redesigned enterprise communication platform (2M+ users) with messaging, calls, and collaboration tools.
             </p>
@@ -40,9 +45,12 @@
           </div>
         </a>
 
-        <a class="card" href="alfa.html" aria-label="Open Alfa Digital case study">
+        <a class="card alfa" href="alfa.html" aria-label="Open Alfa Digital case study">
           <div class="card-top">
-            <div class="badge"><span class="dot"></span> Alfa Digital</div>
+            <div class="badge alfa">
+              <span class="icon">🅰️</span>
+              Alfa Digital
+            </div>
             <p>
               Redesigned Alfa Digital’s website (+33% conversion), the internal HR platform of one of the largest private banks in Eastern Europe.
             </p>
@@ -52,9 +60,12 @@
           </div>
         </a>
 
-        <a class="card" href="raiffeisen.html" aria-label="Open Raiffeisen Invest case study">
+        <a class="card raif" href="raiffeisen.html" aria-label="Open Raiffeisen Invest case study">
           <div class="card-top">
-            <div class="badge"><span class="dot"></span> Raiffeisen Invest</div>
+            <div class="badge raif">
+              <span class="icon">✳️</span>
+              Raiffeisen Invest
+            </div>
             <p>
               Conducted a research-driven UX audit of the Raiffeisen Invest app to uncover friction points for novice investors.
             </p>
@@ -70,11 +81,9 @@
     <section id="contact" class="cta">
       <h2>Let’s work on meaningful products together!</h2>
       <p>
-        Connect with me on
-        <a href="https://www.linkedin.com/in/ekaterina-vakhrusheva" target="_blank" rel="noreferrer">LinkedIn</a>,
-        send a message to my
-        <a href="mailto:ekaterin.vakhrusheva@gmail.com">email</a>
-        or check my experience in my <a href="#" title="Add CV link later">CV</a>.
+        Connect with me on <a class="link-tag linkedin" href="https://www.linkedin.com/in/ekaterina-vakhrusheva" target="_blank" rel="noreferrer">LinkedIn</a>,
+        send a message to my <a class="link-tag email" href="mailto:ekaterin.vakhrusheva@gmail.com">email</a>
+        or check my experience in my <a class="link-tag cv" href="#" title="Add CV link later">CV</a>.
       </p>
     </section>
 
@@ -84,7 +93,7 @@
   </div>
 
   <script>
-    // Highlight active nav item on scroll (lightweight)
+    // Highlight active nav item on scroll
     const sections = ["about","work","contact"].map(id => document.getElementById(id));
     const links = Array.from(document.querySelectorAll(".nav-pill a"));
 
@@ -93,9 +102,7 @@
     };
 
     const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) setActive("#" + e.target.id);
-      });
+      entries.forEach(e => { if (e.isIntersecting) setActive("#" + e.target.id); });
     }, { rootMargin: "-45% 0px -45% 0px", threshold: 0.01 });
 
     sections.forEach(s => obs.observe(s));
