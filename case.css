@@ -270,6 +270,5 @@
 }
 
 .metric .num{
-  word-break: keep-all;
   white-space: nowrap;
 }
