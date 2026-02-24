@@ -4,26 +4,239 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>eXpress — Case Study</title>
+
+  <!-- общий стиль сайта -->
   <link rel="stylesheet" href="style.css" />
+  <!-- стиль страницы кейса -->
+  <link rel="stylesheet" href="case.css" />
 </head>
 <body>
-  <div class="container">
-    <nav class="nav">
-      <div class="nav-pill">
+
+  <div class="case-wrap">
+    <!-- Top navigation -->
+    <div class="case-topbar">
+      <a class="back-link" href="index.html#work">← Back to Home</a>
+
+      <div class="case-pill">
         <a href="index.html#about">About</a>
         <a class="active" href="index.html#work">Work</a>
         <a href="index.html#contact">Contact</a>
       </div>
-    </nav>
+    </div>
 
-    <a href="index.html#work" style="color:#b7b7b7; border-bottom:1px solid rgba(255,255,255,.25);">
-      ← Back to Work
-    </a>
+    <!-- Hero -->
+    <header class="case-hero">
+      <div class="case-icon">
+        <!-- если у тебя есть иконка проекта -->
+        <img src="assets/icon-express.png" alt="" aria-hidden="true" />
+      </div>
 
-    <h1 class="h1" style="text-align:left; margin-top:18px;">eXpress</h1>
-    <p class="lead" style="text-align:left;">
-      Case study page (draft). Next step: add TL;DR, problem, process, solution, impact.
-    </p>
+      <h1 class="case-title">eXpress</h1>
+
+      <p class="case-subtitle">
+        I redesigned key flows in a large-scale enterprise communication platform (2M+ users) to make navigation clearer,
+        reduce cognitive load, and help users reach messages, calls, and collaboration tools faster.
+      </p>
+
+      <div class="meta">
+        <div class="meta-item">
+          <p class="meta-k">Scope</p>
+          <p class="meta-v">UX research, UX/UI design, prototyping, design system</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-k">My role</p>
+          <p class="meta-v">Product Designer (end-to-end)</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-k">Platform</p>
+          <p class="meta-v">Web, mobile</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-k">Timeline</p>
+          <p class="meta-v">2024 – present</p>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img src="assets/case-express-hero.png" alt="eXpress product overview" />
+      </div>
+    </header>
+
+    <!-- Context / Problem -->
+    <section class="section">
+      <h2 class="h2">Context</h2>
+      <p class="p">
+        The product had grown for years: new features were shipped, but information architecture and key entry points
+        didn’t evolve at the same pace. As a result, users struggled to locate important actions, and teams had
+        to compensate with onboarding and support.
+      </p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="h2" style="font-size:16px;margin:0 0 10px;">The challenge</h3>
+          <ul class="bullets">
+            <li>Fragmented navigation and inconsistent patterns across modules</li>
+            <li>High cognitive load for daily workflows (messages, calls, files)</li>
+            <li>New features were hard to discover → lower adoption</li>
+            <li>[Add: top user complaints / insights if you have them]</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="h2" style="font-size:16px;margin:0 0 10px;">Success criteria</h3>
+          <ul class="bullets">
+            <li>Users can find core features faster with fewer wrong turns</li>
+            <li>Navigation becomes scalable (supports future growth)</li>
+            <li>Improved usability test metrics: task success / time-on-task</li>
+            <li>[Add: business KPI you tracked: support tickets, adoption, etc.]</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research stages -->
+    <section class="section">
+      <h2 class="h2">Research stages</h2>
+      <p class="p">
+        I started by mapping where users get stuck, then validated hypotheses through quick iterations and usability testing.
+      </p>
+
+      <div class="stage">
+        <div>
+          <h3 class="h2" style="font-size:16px;margin:0 0 8px;">1) UX audit + journey mapping</h3>
+          <p class="p">
+            Reviewed key flows end-to-end, identified friction points, and aligned findings with product/engineering on priorities.
+          </p>
+          <ul class="bullets">
+            <li>Heuristic evaluation for navigation & findability</li>
+            <li>IA map: entry points → key actions → dead ends</li>
+            <li>[Optional] support tickets / feedback clustering</li>
+          </ul>
+        </div>
+        <img src="assets/case-express-stage-audit.png" alt="UX audit artifacts" />
+      </div>
+
+      <div class="stage">
+        <div>
+          <h3 class="h2" style="font-size:16px;margin:0 0 8px;">2) Iterative prototyping</h3>
+          <p class="p">
+            Built quick prototypes, tested variations of navigation labels, grouping, and entry points, and iterated weekly.
+          </p>
+          <ul class="bullets">
+            <li>Low-to-mid fidelity prototypes in Figma</li>
+            <li>Explored 2–3 IA options and validated with stakeholders</li>
+            <li>Prepared handoff-ready specs for engineering</li>
+          </ul>
+        </div>
+        <img src="assets/case-express-stage-proto.png" alt="Prototype iterations" />
+      </div>
+
+      <div class="stage">
+        <div>
+          <h3 class="h2" style="font-size:16px;margin:0 0 8px;">3) Usability testing</h3>
+          <p class="p">
+            Confirmed that the redesigned IA reduces search time and improves confidence in completing key tasks.
+          </p>
+          <ul class="bullets">
+            <li>Task success, time-on-task, and error rate tracking</li>
+            <li>Validated copy & iconography comprehension</li>
+            <li>[Add] sample size + user segments</li>
+          </ul>
+        </div>
+        <img src="assets/case-express-stage-test.png" alt="Usability testing notes" />
+      </div>
+    </section>
+
+    <!-- Solutions -->
+    <section class="section">
+      <h2 class="h2">Solution</h2>
+      <p class="p">
+        The solution focused on making the product easier to scan and navigate, while keeping it scalable for future modules.
+      </p>
+
+      <div class="section" style="margin-top:18px;">
+        <h3 class="h2" style="font-size:16px;margin:0 0 10px;">Navigation efficiency & information hierarchy</h3>
+        <p class="p">
+          I introduced clearer grouping, surfaced key actions, and reduced ambiguity in labels, so users could locate features faster.
+        </p>
+
+        <div class="compare">
+          <div>
+            <div class="shot">
+              <img src="assets/case-express-before-1.png" alt="Before: navigation" />
+            </div>
+            <div class="caption">Before — fragmented entry points and inconsistent patterns</div>
+          </div>
+          <div>
+            <div class="shot">
+              <img src="assets/case-express-after-1.png" alt="After: navigation" />
+            </div>
+            <div class="caption">After — clearer hierarchy and quicker access to daily actions</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" style="margin-top:32px;">
+        <h3 class="h2" style="font-size:16px;margin:0 0 10px;">Personalized UI & feature onboarding</h3>
+        <p class="p">
+          Added lightweight personalization and short onboarding flows so new features become discoverable without overwhelming users.
+        </p>
+
+        <div class="hero-media">
+          <img src="assets/case-express-onboarding.png" alt="Feature onboarding" />
+        </div>
+      </div>
+
+      <div class="section" style="margin-top:32px;">
+        <h3 class="h2" style="font-size:16px;margin:0 0 10px;">Consistency & scalability (design system)</h3>
+        <p class="p">
+          Built reusable patterns and components to unify the experience across modules and speed up delivery.
+        </p>
+
+        <div class="hero-media">
+          <img src="assets/case-express-ds.png" alt="Design system components" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="section">
+      <h2 class="h2">Results & impact</h2>
+      <p class="p">
+        After release, we tracked usability improvements and adoption signals. Replace the placeholders with your real numbers.
+      </p>
+
+      <div class="metrics">
+        <div class="metric">
+          <p class="num">[95%]</p>
+          <p class="lbl">Task completion in usability tests</p>
+        </div>
+        <div class="metric">
+          <p class="num">[+2.3×]</p>
+          <p class="lbl">NPS growth (or user satisfaction)</p>
+        </div>
+        <div class="metric">
+          <p class="num">[1.5×]</p>
+          <p class="lbl">Faster delivery with reusable patterns</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- More projects -->
+    <section class="more">
+      <h3>More projects</h3>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+        <a href="alfa.html">Alfa Digital →</a>
+        <a href="raiffeisen.html">Raiffeisen Invest →</a>
+        <a href="index.html#work">Back to Home →</a>
+      </div>
+    </section>
+
+    <div class="footer-mini">
+      Designed and coded by Ekaterina Vakhrusheva · 2026
+    </div>
   </div>
 </body>
 </html>
