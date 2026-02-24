@@ -35,7 +35,7 @@ a{ color: inherit; text-decoration:none; }
 .container{
   max-width: 1120px;
   margin: 0 auto;
-  padding: 28px 20px 72px;
+  padding: 28px 20px 60px;
 }
 
 .nav{
@@ -139,7 +139,6 @@ a{ color: inherit; text-decoration:none; }
   gap: 18px;
 }
 
-/* карточка */
 .card{
   position: relative;
   display:flex;
@@ -156,7 +155,6 @@ a{ color: inherit; text-decoration:none; }
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 
-/* проектный градиент overlay (появляется на hover) */
 .card::before{
   content:"";
   position:absolute;
@@ -167,7 +165,6 @@ a{ color: inherit; text-decoration:none; }
   pointer-events:none;
 }
 
-/* soft highlight сверху/слева + чуть градиента */
 .card::after{
   content:"";
   position:absolute;
@@ -178,12 +175,12 @@ a{ color: inherit; text-decoration:none; }
 }
 
 .card:hover{
-  transform: translateY(-2px) scale(1.03); /* увеличиваем, как просила */
+  transform: translateY(-2px) scale(1.03);
   box-shadow: var(--shadow);
   border-color: rgba(255,255,255,.18);
 }
 
-/* overlay gradients per project (низ карточки) */
+/* overlay gradients per project */
 .card.express::before{
   background: radial-gradient(620px 320px at 50% 120%, rgba(127,157,224,.32), rgba(127,157,224,0) 68%);
 }
@@ -210,7 +207,7 @@ a{ color: inherit; text-decoration:none; }
   margin-bottom: 10px;
   letter-spacing: -0.01em;
 }
-/* project icon image inside badge */
+
 .icon-img{
   width: 24px;
   height: 24px;
@@ -218,19 +215,17 @@ a{ color: inherit; text-decoration:none; }
   vertical-align: middle;
 }
 
-/* цвет названия проекта */
 .badge.express{ color: var(--c-express); }
 .badge.alfa{ color: var(--c-alfa); }
 .badge.raif{ color: var(--c-raif); }
 
 .card p{
   margin: 0;
-  color: #ffffff;     /* было muted */
+  color: #ffffff;
   font-size: 14px;
   max-width: 92%;
 }
 
-/* превью */
 .card-media{
   position:relative;
   z-index:1;
@@ -243,13 +238,13 @@ a{ color: inherit; text-decoration:none; }
   border-radius: var(--radius-lg);
 }
 
-/* CTA */
 .cta{
-  margin-top: 100px;   /* было 120 */
+  margin-top: 100px;
   text-align:center;
 }
 .cta h2{
   font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.08;
   margin: 0 0 10px;
   letter-spacing: -0.02em;
 }
@@ -259,7 +254,6 @@ a{ color: inherit; text-decoration:none; }
   font-size: 14px;
 }
 
-/* цветные ссылки снизу + подложки */
 .link-tag{
   display:inline-block;
   padding: 2px 6px;
