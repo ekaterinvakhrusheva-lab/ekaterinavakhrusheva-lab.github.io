@@ -182,11 +182,11 @@
 }
 
 .case-overview-wrap{
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 6px;
 }
 
 /* small section label */
@@ -201,8 +201,8 @@
 /* main paragraph text */
 .case-overview-text p{
   margin: 0 0 14px;
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.5;
   color: var(--text);
   text-align: left;
 }
