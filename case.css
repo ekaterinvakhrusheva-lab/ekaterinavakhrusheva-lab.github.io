@@ -1,4 +1,6 @@
-/* Layout */
+/* ===============================
+   Layout
+   =============================== */
 
 .case-wrap{
   max-width: 1120px;
@@ -6,6 +8,7 @@
   padding: 28px 20px 32px;
 }
 
+/* Sticky nav (same as Home) */
 .nav{
   position: sticky;
   top: 14px;
@@ -69,7 +72,7 @@
 
 
 /* ===============================
-   HERO
+   Hero
    =============================== */
 
 .case-hero{
@@ -96,10 +99,9 @@
 }
 
 .case-title{
-  margin:0 0 10px;
+  margin: 0 0 12px;
   font-size: clamp(34px, 4.4vw, 56px);
   line-height: 1.08;
-  margin: 0 0 12px;
   letter-spacing: -0.03em;
 }
 
@@ -113,11 +115,11 @@
 
 
 /* ===============================
-   META LINE
+   Meta line
    =============================== */
 
 .case-meta-line{
-  max-width:1040px;
+  max-width:1120px; /* 1040 -> 1120 */
   margin:32px auto 0;
   padding-top:32px;
   border-top:1px solid var(--border);
@@ -140,10 +142,14 @@
   line-height:1.25;
 }
 
+
+/* ===============================
+   Hero media (no frame)
+   =============================== */
+
 .case-hero-media{
-  max-width: 1040px;
+  max-width: 1120px; /* 1040 -> 1120 */
   margin: 60px auto 0;
-  border-radius: none;
   overflow: hidden;
   border: none;
   background: transparent;
@@ -154,7 +160,7 @@
   height: auto;
   display: block;
   border-radius: 0;
-  border: none;  
+  border: none;
 }
 
 .no-frame{
@@ -167,12 +173,9 @@
   border-radius: 0 !important;
 }
 
-/* ===============================
-   CASE OVERVIEW BLOCK
-   =============================== */
 
 /* ===============================
-   CASE OVERVIEW / CHALLENGE / RESEARCH TEXT BLOCK
+   Section spacing + shared text block
    =============================== */
 
 .case-overview,
@@ -182,11 +185,11 @@
 }
 
 .case-overview-wrap{
-  max-width: 600px;
+  max-width: 600px; /* final: 600 for Overview/Challenge/Research/Impact/Afterword */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 6px; /* label -> text distance */
 }
 
 /* small section label */
@@ -206,184 +209,15 @@
   color: var(--text);
   text-align: left;
 }
+.case-overview-text p:last-child{ margin-bottom: 0; }
 
-.case-overview-text p:last-child{
-  margin-bottom: 0;
-}
-
-.case-h3{
-  font-size: 16px;
-  margin: 0 0 10px;
-  letter-spacing: -0.01em;
-}
-
-.case-kicker{
-  font-size: 12px;
-  color: var(--muted-2);
-  letter-spacing: .02em;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-/* quote highlight */
-.case-quote{
-  margin-top: 14px;
-  padding: 14px 16px;
-  border-radius: var(--radius-lg);
-  background: rgba(127,157,224,.10);
-  border: 1px solid rgba(127,157,224,.22);
-}
-
-.case-quote-text{
-  margin: 0;
-  color: var(--text);
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.case-quote-meta{
-  margin-top: 8px;
-  font-size: 12px;
-  color: var(--muted);
-}
-
-/* details (accordion without JS) */
-.case-details{
-  margin-top: 14px;
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--border);
-  background: var(--surface-2);
-  overflow: hidden;
-}
-
-.case-details summary{
-  list-style: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  color: var(--text);
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.case-details summary::-webkit-details-marker{ display: none; }
-
-.case-details summary::after{
-  content: "＋";
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.case-details[open] summary::after{
-  content: "—";
-}
-
-.case-details-body{
-  padding: 0 16px 14px;
-}
-
-/* timeline */
-.case-timeline{
-  margin-top: 16px;
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--border);
-  background: var(--surface-2);
-  padding: 18px;
-}
-
-.case-step + .case-step{
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255,255,255,.06);
-}
-
-.case-step-top{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
-}
-
-.case-step-dot{
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(127,157,224,.75);
-}
-
-.case-step-title{
-  font-size: 14px;
-  color: var(--text);
-}
-
-/* solution blocks */
-.case-solution{
-  margin-top: 16px;
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-  padding: 18px;
-}
-
-.case-solution + .case-solution{
-  margin-top: 14px;
-}
-
-.case-solution-media{
-  margin-top: 14px;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,.08);
-  background: rgba(255,255,255,.02);
-}
-
-.case-solution-media img{
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* more links layout (removes inline styles) */
-.more-links{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-}
-
-/* responsive tweaks */
-@media (min-width: 980px){
-  .case-flow{
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .case-block{
-    padding: 20px;
-  }
-}
-
-@media (max-width: 560px){
-  .case-details summary{
-    padding: 12px 14px;
-  }
-  .case-timeline{
-    padding: 14px;
-  }
-}
 
 /* ===============================
-   CHALLENGE + RESEARCH (final)
+   Research (4 cards with thin left line)
    =============================== */
 
-/* keep text blocks consistent (800px already set above, but enforce here too) */
-.case-challenge .case-overview-wrap,
-.case-research .case-overview-wrap{
-  max-width: 800px;
-}
-
-/* Research grid — 2x2 with equal row heights (so lines match) */
 .case-research-grid{
-  max-width: 800px;
+  max-width: 800px; /* cards block wider than intro text (as сейчас) */
   margin: 28px auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -391,22 +225,18 @@
   align-items: stretch;
 }
 
-/* Research card — editorial style with a thin left line */
 .case-research-card{
   position: relative;
   padding: 24px 0 24px 24px;
   background: transparent;
   border: none;
 
-  /* important: stretch to row height so the line is consistent */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
   text-align: left;
 }
 
-/* thin vertical line (same top/bottom across cards) */
 .case-research-card::before{
   content: "";
   position: absolute;
@@ -417,15 +247,9 @@
   background: rgba(255,255,255,.10);
 }
 
-/* title row */
 .case-research-top{
   display: block;
   margin-bottom: 14px;
-}
-
-/* hide numbering if it still exists in HTML */
-.case-research-num{
-  display: none !important;
 }
 
 .case-research-title{
@@ -434,33 +258,14 @@
   letter-spacing: -0.01em;
 }
 
-/* Dash list (—) instead of bullets */
+/* Dash list (—) */
 .case-dash-list p{
   margin: 0 0 10px;
   font-size: 15px;
   line-height: 1.6;
   color: var(--text);
 }
-.case-dash-list p:last-child{
-  margin-bottom: 0;
-}
-
-/* If some cards still use <ul class="bullets"> — neutralize bullets */
-.case-research-card .bullets{
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-.case-research-card .bullets li{
-  margin: 0 0 10px;
-  color: var(--text);
-  font-size: 15px;
-  line-height: 1.6;
-}
-.case-research-card .bullets li::before{
-  content: "— ";
-  color: var(--text);
-}
+.case-dash-list p:last-child{ margin-bottom: 0; }
 
 /* Quotes: no background, bold, #7f9de0 */
 .case-research-quotes{
@@ -478,47 +283,44 @@
   font-weight: 700;
   color: #7f9de0;
 }
+.case-research-quotes .case-quote-text:last-child{ margin-bottom: 0; }
 
-.case-research-quotes .case-quote-text:last-child{
-  margin-bottom: 0;
-}
-
-/* responsive */
 @media (max-width: 980px){
   .case-research-grid{
     grid-template-columns: 1fr;
     gap: 26px;
+    padding: 0 20px;
   }
 }
 
+
 /* ===============================
-   SOLUTION — editorial layout (fixed)
+   Solution — editorial
    =============================== */
 
 .case-solution-editorial{
   margin-top: 80px;
 }
 
-/* make Solution label block match solution width and spacing */
+/* Solution label block — 6px gap to next content */
 .case-solution-editorial > .case-overview-wrap{
-  max-width: 800px;
-  margin: 0 auto 6px; /* <-- 6px gap to the first title */
+  margin: 0 auto 6px;
 }
 
-/* each solution section */
+/* Each solution block (text narrow) */
 .case-solution-block{
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
-/* spacing between meaning blocks: 80px */
+/* spacing between meaning blocks */
 .case-solution-block + .case-solution-block{
   margin-top: 80px;
 }
 
-/* titles & text left aligned */
+/* Titles & text */
 .case-solution-title{
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 600;
   letter-spacing: -0.02em;
   margin: 0 0 12px;
@@ -526,339 +328,90 @@
 }
 
 .case-solution-text{
-  max-width: 800px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   color: var(--text);
   margin: 0 0 24px;
   text-align: left;
 }
 
-/* Before/After: full width columns with equal height images */
+/* Image rows should use full content container width (1120) */
+.case-before-after,
+.case-single-shot{
+  width: 100%;
+  max-width: 1120px; /* 1040 -> 1120 */
+  margin: 24px auto 0;
+  transform: none;
+}
+
+/* Before/After grid */
 .case-before-after{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 40px;
   align-items: start;
 }
 
-.case-shot{
-  width: 100%;
-}
+.case-shot{ width: 100%; }
 
+/* Labels: centered, 6px from images */
 .case-shot-label{
+  width: 100%;
+  text-align: center;
+  margin: 0 0 6px;
   font-size: 13px;
   color: var(--muted-2);
-  margin: 0 0 10px;
-  text-align: left;
 }
 
-/* key part: images same height, fill width, no rounding */
+/* Before/After images: equal height, fill column width, no rounding, no cropping */
 .case-shot img{
   width: 100%;
-  height: 320px;        /* одинаковая высота для Before/After */
-  object-fit: cover;    /* заполняет контейнер, даже если размеры разные */
+  height: 320px;
+  object-fit: contain; /* keep all content */
   display: block;
-  border-radius: 0;     /* убрать скругления */
+  border-radius: 0;
+  background: transparent;
 }
 
-/* single image section */
-.case-single-shot{
-  margin-top: 12px;
-}
-
+/* Single image: full width of container, consistent height */
 .case-single-shot img{
   width: 100%;
-  height: 420px;        /* единая высота для одиночных hero-like скринов */
-  object-fit: cover;
+  height: 420px;
+  object-fit: contain;
   display: block;
-  border-radius: 0;     /* убрать скругления */
+  border-radius: 0;
+  background: transparent;
 }
 
-/* responsive */
 @media (max-width: 980px){
-  .case-solution-editorial > .case-overview-wrap,
-  .case-solution-block{
-    max-width: 800px;
-    padding: 0 20px;
-  }
-
   .case-before-after{
     grid-template-columns: 1fr;
     gap: 18px;
   }
 
-  .case-shot img{
-    height: 260px;
-  }
-
-  .case-single-shot img{
-    height: 320px;
-  }
-
-  .case-solution-title{
-    font-size: 22px;
-  }
-
-  .case-solution-text{
-    font-size: 16px;
-  }
+  .case-shot img{ height: 260px; }
+  .case-single-shot img{ height: 320px; }
 }
+
 
 /* ===============================
-   FIXES: widths + labels + images + typography
-   =============================== */
-
-/* 1) Challenge + Research header: 600px */
-.case-challenge .case-overview-wrap,
-.case-research .case-overview-wrap{
-  max-width: 600px !important;
-}
-
-/* 1) Solution blocks: 600px */
-.case-solution-editorial > .case-overview-wrap{
-  max-width: 600px !important;
-}
-
-.case-solution-block{
-  max-width: 600px !important;
-}
-
-/* 4) Solution typography */
-.case-solution-title{
-  font-size: 22px !important;
-}
-
-.case-solution-text{
-  font-size: 16px !important;
-  max-width: 600px !important;
-}
-
-/* 2) Before/After labels centered */
-.case-shot-label{
-  width: 100%;
-  text-align: center !important;
-}
-
-/* 3) Images should not crop: keep all content visible */
-.case-shot img{
-  width: 100%;
-  height: 320px;           /* keep equal heights across Before/After */
-  object-fit: contain !important; /* <-- no cropping */
-  background: transparent;  /* or: var(--surface-2) if you want a subtle fill */
-  display: block;
-  border-radius: 0;
-}
-
-.case-single-shot img{
-  width: 100%;
-  height: 420px;           /* consistent height for single images */
-  object-fit: contain !important; /* <-- no cropping */
-  background: transparent;
-  display: block;
-  border-radius: 0;
-}
-
-/* responsive */
-@media (max-width: 980px){
-  .case-challenge .case-overview-wrap,
-  .case-research .case-overview-wrap,
-  .case-solution-editorial > .case-overview-wrap,
-  .case-solution-block,
-  .case-solution-text{
-    max-width: 600px !important;
-    padding: 0 20px;
-  }
-
-  .case-shot img{
-    height: 260px;
-  }
-
-  .case-single-shot img{
-    height: 320px;
-  }
-}
-
-/* ===============================
-   Solution images: full width of content container
-   =============================== */
-
-/* Keep text narrow */
-.case-solution-block{
-  max-width: 600px !important;
-}
-
-/* Expand image rows to the global content container width */
-.case-before-after,
-.case-single-shot{
-  max-width: 1040px;       /* <-- ограничитель = общий контейнер контента */
-  margin-left: 50%;
-  transform: translateX(-50%);
-  width: calc(100vw - 40px); /* respects page padding */
-}
-
-/* BUT don't exceed container */
-@media (min-width: 1120px){
-  .case-before-after,
-  .case-single-shot{
-    width: 1040px;
-  }
-}
-
-/* Labels: centered + 6px from image */
-.case-shot-label{
-  width: 100%;
-  text-align: center !important;
-  margin: 0 0 6px !important;
-}
-
-/* Images: fill their column width, no rounding, no cropping */
-.case-shot img{
-  width: 100%;
-  height: 320px;
-  object-fit: contain !important;
-  display: block;
-  border-radius: 0;
-}
-
-.case-single-shot img{
-  width: 100%;
-  height: 420px;
-  object-fit: contain !important;
-  display: block;
-  border-radius: 0;
-}
-
-/* Responsive: keep full-width behavior but reduce heights */
-@media (max-width: 980px){
-  .case-before-after,
-  .case-single-shot{
-    width: calc(100vw - 40px);
-    max-width: 1040px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .case-shot img{
-    height: 260px;
-  }
-
-  .case-single-shot img{
-    height: 320px;
-  }
-}
-
-/* ===============================
-   Before/After: same height, flexible widths
-   =============================== */
-
-/* replace grid with flex so widths can differ */
-.case-before-after{
-  display: flex !important;
-  align-items: flex-start;
-  gap: 40px;              /* расстояние между before/after */
-  justify-content: flex-start; /* не обязано быть по центру */
-}
-
-/* each column auto-sizes by its content */
-.case-shot{
-  flex: 0 0 auto;
-}
-
-/* keep labels centered above each image and close to it */
-.case-shot-label{
-  text-align: center !important;
-  margin: 0 0 6px !important;
-}
-
-/* same height for both, widths adapt to aspect ratio */
-.case-shot img{
-  height: 320px !important;     /* одна высота */
-  width: auto !important;       /* ширина по пропорциям */
-  max-width: 100%;              /* чтобы не вылезало */
-  object-fit: contain !important;
-  display: block;
-  border-radius: 0;
-}
-
-/* mobile: stack */
-@media (max-width: 980px){
-  .case-before-after{
-    flex-direction: column !important;
-    gap: 18px;
-  }
-
-  .case-shot img{
-    height: 260px !important;
-    width: 100% !important;     /* на мобилке лучше во всю ширину */
-  }
-}
-
-/* ===============================
-   IMPACT — editorial + big numbers
+   Impact — 2 columns, centered to text width
    =============================== */
 
 .case-impact .case-overview-wrap{
   max-width: 600px;
 }
 
-/* metrics grid */
 .case-impact-grid{
-  max-width: 1040px;       /* aligns with your content container */
-  margin: 28px auto 0;
+  max-width: 600px;       /* align to intro text */
+  margin: 32px auto 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-/* item */
-.impact-item{
-  text-align: left;
-}
-
-/* big number highlight (like screen 3) */
-.impact-num{
-  font-size: 44px;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  font-weight: 700;
-  color: #7f9de0;
-  margin-bottom: 10px;
-}
-
-/* label under number */
-.impact-label{
-  font-size: 14px;
-  line-height: 1.4;
-  color: var(--muted);
-}
-
-/* responsive */
-@media (max-width: 980px){
-  .case-impact-grid{
-    grid-template-columns: 1fr;
-    max-width: 600px;
-    gap: 22px;
-    padding: 0 20px;
-  }
-
-  .impact-num{
-    font-size: 36px;
-  }
-}
-
-/* ===============================
-   IMPACT — 2 columns + label style
-   =============================== */
-
-.case-impact-grid{
-  max-width: 1040px;
-  margin: 28px auto 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;  /* 2 columns */
-  gap: 44px 64px;                  /* row / column gaps */
+  grid-template-columns: 1fr 1fr;
+  gap: 44px 64px;
   align-items: start;
 }
+
+.impact-item{ text-align: left; }
 
 .impact-num{
   font-size: 44px;
@@ -876,143 +429,19 @@
   color: #fff;
 }
 
-/* responsive */
 @media (max-width: 980px){
   .case-impact-grid{
     grid-template-columns: 1fr;
-    max-width: 600px;
     gap: 24px;
     padding: 0 20px;
   }
 
-  .impact-num{
-    font-size: 36px;
-  }
+  .impact-num{ font-size: 36px; }
 }
 
-/* Fix: Before/After should follow content container, not viewport */
-
-.case-before-after,
-.case-single-shot{
-  width: 100% !important;
-  max-width: 1040px !important;   /* поставь здесь ширину твоего общего контейнера */
-  margin: 24px auto 0 !important; /* центрируем блок */
-  transform: none !important;     /* убираем translateX */
-}
-
-/* Center metrics block relative to text */
-
-.case-impact-grid{
-  max-width: 600px !important;   /* такая же ширина как у текста */
-  margin: 32px auto 0 !important;
-  grid-template-columns: 1fr 1fr; /* 2 колонки сохраняем */
-}
-/* ===============================
-   FINAL FIX: Solution images stay inside 1120px content container
-   =============================== */
-
-.case-before-after,
-.case-single-shot{
-  width: 100% !important;
-  max-width: 1120px !important;     /* <-- твой контейнер */
-  margin: 24px auto 0 !important;
-  transform: none !important;
-}
-
-/* Before/After layout inside container */
-.case-before-after{
-  display: grid !important;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: start;
-}
-
-/* labels: centered, 6px from image */
-.case-shot-label{
-  text-align: center !important;
-  margin: 0 0 6px !important;
-}
-
-/* images: fill column width, same height, no cropping */
-.case-shot img{
-  width: 100% !important;
-  height: 320px !important;
-  object-fit: contain !important;   /* no cropping */
-  display: block;
-  border-radius: 0 !important;
-}
-
-/* single image: full container width */
-.case-single-shot img{
-  width: 100% !important;
-  height: 420px !important;
-  object-fit: contain !important;
-  display: block;
-  border-radius: 0 !important;
-}
-
-/* responsive */
-@media (max-width: 980px){
-  .case-before-after{
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .case-shot img{
-    height: 260px !important;
-  }
-
-  .case-single-shot img{
-    height: 320px !important;
-  }
-}
-/* ===============================
-   FIX: Before/After images fill 1040px container
-   =============================== */
-
-.case-before-after{
-  max-width: 1040px !important;
-  width: 100% !important;
-  margin: 24px auto 0 !important;
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 40px !important;
-  transform: none !important;
-}
-
-.case-shot{
-  width: 100%;
-}
-
-/* IMPORTANT: override old width:auto */
-.case-shot img{
-  width: 100% !important;         /* <-- растягиваем под колонку */
-  height: 320px !important;       /* одинаковая высота */
-  object-fit: contain !important; /* ничего не обрезаем */
-  display: block;
-  border-radius: 0 !important;
-}
-
-/* labels */
-.case-shot-label{
-  text-align: center !important;
-  margin: 0 0 6px !important;
-}
-
-/* responsive */
-@media (max-width: 980px){
-  .case-before-after{
-    grid-template-columns: 1fr !important;
-    gap: 18px !important;
-  }
-
-  .case-shot img{
-    height: 260px !important;
-  }
-}
 
 /* ===============================
-   Afterword + More projects (clean ending)
+   Afterword + More projects
    =============================== */
 
 .case-afterword .case-overview-wrap{
@@ -1061,7 +490,7 @@
   transform: translateY(-1px);
 }
 
-/* Footer — match style.css (.footer) */
+/* Footer — match style.css */
 .footer{
   margin-top: 100px;
   text-align: center;
@@ -1069,7 +498,6 @@
   font-size: 12px;
 }
 
-/* Responsive */
 @media (max-width: 980px){
   .case-more-links{
     border-radius: 18px;
