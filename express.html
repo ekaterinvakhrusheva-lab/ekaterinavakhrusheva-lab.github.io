@@ -64,192 +64,258 @@
 </header>
     
     <!-- TL;DR -->
-    <section class="section">
-      <h2 class="h2">TL;DR</h2>
+<section class="section">
+  <h2 class="h2">TL;DR</h2>
 
-      <div class="grid-2">
-        <div class="card">
-          <h3 class="h2" style="font-size:16px;margin:0 0 10px;">What changed</h3>
-          <ul class="bullets">
-            <li>Restructured IA and navigation to surface daily actions and reduce “search time”</li>
-            <li>Unified UI patterns via a design system (faster delivery + consistency)</li>
-            <li>Designed with enterprise constraints: legacy code + customer theming requirements</li>
-          </ul>
-        </div>
+  <div class="grid-2">
+    <div class="card">
+      <h3 class="case-h3">What I did</h3>
+      <ul class="bullets">
+        <li>Reshaped navigation & IA so daily actions are easier to find</li>
+        <li>Unified patterns with a design system (less “UI drift”)</li>
+        <li>Designed within enterprise constraints (legacy + theming)</li>
+      </ul>
+    </div>
 
-        <div class="card">
-          <h3 class="h2" style="font-size:16px;margin:0 0 10px;">Impact</h3>
-          <ul class="bullets">
-            <li>Task success rate reached 95% (fewer steps and clearer paths)</li>
-            <li>NPS improved from –19.9 to +14 (users called out easier navigation)</li>
-            <li>Design system reduced development time by ~1.5×</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <div class="card">
+      <h3 class="case-h3">What changed</h3>
+      <ul class="bullets">
+        <li>Task success: +16 p.p. → 91%</li>
+        <li>NPS: –19.9 → +14</li>
+        <li>Delivery: ~1.5× faster with the design system</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <!-- Context / Problem -->
-    <section class="section">
-      <h2 class="h2">Context</h2>
+<!-- The story -->
+<section class="section">
+  <h2 class="h2">The story</h2>
+
+  <div class="case-flow">
+    <div class="case-block">
+      <div class="case-kicker">Context</div>
       <p class="p">
-        Over time, the product expanded: new capabilities were added, but the underlying structure didn’t keep up.
-        For users, this showed up as inconsistent navigation, duplicated patterns, and extra steps in routine tasks
-        (messages, calls, collaboration). For teams, it meant slower delivery and more UI inconsistencies.
+        eXpress grew fast: messaging, calls, collaboration — features kept shipping, but the structure didn’t.
+        Over time, the UI started to feel “patchy”: different patterns, different entry points, and lots of extra steps.
+      </p>
+    </div>
+
+    <div class="case-block">
+      <div class="case-kicker">What users felt</div>
+      <p class="p">
+        People weren’t “lost” in one big moment — they were slightly lost all day long.
+        Finding chats, starting calls, switching contexts… it added up.
       </p>
 
-      <div class="grid-2">
-        <div class="card">
-          <h3 class="h2" style="font-size:16px;margin:0 0 10px;">The core problem</h3>
-          <ul class="bullets">
-            <li>Fragmented navigation → users couldn’t reliably predict where to find features</li>
-            <li>High cognitive load in daily flows due to mixed patterns and unclear hierarchy</li>
-            <li>Feature discoverability suffered → onboarding and support had to compensate</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3 class="h2" style="font-size:16px;margin:0 0 10px;">Constraints (enterprise reality)</h3>
-          <ul class="bullets">
-            <li>Legacy code limited what could be refactored immediately</li>
-            <li>Customer theming: UI must support brand colors for large organizations</li>
-            <li>Web-first delivery; mobile followed with shared patterns where possible</li>
-          </ul>
-        </div>
+      <div class="case-quote">
+        <p class="case-quote-text">“I spend more time searching for chats than actually using them.”</p>
+        <div class="case-quote-meta">User feedback</div>
       </div>
-    </section>
+    </div>
 
-    <!-- Research stages -->
-    <section class="section">
-      <h2 class="h2">Discovery & validation</h2>
+    <div class="case-block">
+      <div class="case-kicker">Goal</div>
       <p class="p">
-        I combined qualitative analysis (audit + workflow mapping) with broader quantitative input (internal survey)
-        to validate priorities and measure perception shifts.
+        Make everyday actions predictable and fast — without breaking enterprise constraints.
+        The focus was not on “prettier UI”, but on clarity, consistency, and scalability.
       </p>
+    </div>
+  </div>
 
-      <div class="stage">
-        <div>
-          <h3 class="h2" style="font-size:16px;margin:0 0 8px;">1) UX audit + workflow mapping</h3>
-          <p class="p">
-            Mapped how users move through key tasks and where they lose time: missing entry points, inconsistent labels,
-            and “dead ends” that forced workarounds.
-          </p>
-          <ul class="bullets">
-            <li>Heuristic evaluation focused on navigation and findability</li>
-            <li>Information architecture map: entry points → actions → drop-offs</li>
-            <li>Prioritization with product/engineering based on feasibility (legacy constraints)</li>
-          </ul>
-        </div>
-        <img src="assets/case-express-stage-audit.png" alt="UX audit artifacts" />
-      </div>
+  <details class="case-details">
+    <summary>Constraints (enterprise reality)</summary>
+    <div class="case-details-body">
+      <ul class="bullets">
+        <li>Legacy code limited what could be refactored immediately</li>
+        <li>Customer theming: UI must support org-specific brand colors</li>
+        <li>Web-first rollout; mobile alignment followed with shared patterns</li>
+      </ul>
+    </div>
+  </details>
+</section>
 
-      <div class="stage">
-        <div>
-          <h3 class="h2" style="font-size:16px;margin:0 0 8px;">2) Survey (411 employees)</h3>
-          <p class="p">
-            Ran an internal survey across roles and departments to quantify pain points and validate which areas had the
-            biggest impact on daily work. This helped align stakeholders on scope and sequencing.
-          </p>
-          <ul class="bullets">
-            <li>Respondents: 411 users across different roles and departments</li>
-            <li>Captured: findability issues, navigation clarity, perceived effort</li>
-            <li>Used results to support prioritization and communicate trade-offs</li>
-          </ul>
-        </div>
-        <img src="assets/case-express-stage-test.png" alt="Survey and insights summary" />
-      </div>
-
-      <div class="stage">
-        <div>
-          <h3 class="h2" style="font-size:16px;margin:0 0 8px;">3) Iterative prototyping + delivery</h3>
-          <p class="p">
-            Built and iterated prototypes to converge on a scalable structure, then supported implementation with specs,
-            QA, and ongoing design system maintenance.
-          </p>
-          <ul class="bullets">
-            <li>Explored multiple IA options; converged on the simplest scalable model</li>
-            <li>Defined UI patterns to prevent future inconsistencies</li>
-            <li>Web-first implementation; mobile alignment in progress</li>
-          </ul>
-        </div>
-        <img src="assets/case-express-stage-proto.png" alt="Prototype iterations" />
-      </div>
-    </section>
-
-    <!-- Solutions -->
-    <section class="section">
-  <h2 class="h2">Results & impact</h2>
+<!-- Discovery -->
+<section class="section">
+  <h2 class="h2">Discovery</h2>
   <p class="p">
-    After rolling out the new information architecture and navigation patterns, we tracked usability outcomes and user sentiment.
-    Metrics below are measured within the product and internal survey feedback.
+    I mixed a UX audit (to see where people lose time) with broader feedback (to confirm what hurts the most),
+    then iterated prototypes with product + engineering.
+  </p>
+
+  <div class="case-timeline">
+    <div class="case-step">
+      <div class="case-step-top">
+        <div class="case-step-dot"></div>
+        <div class="case-step-title">UX audit + workflow mapping</div>
+      </div>
+      <p class="p">Mapped key tasks and pinpointed “dead ends”, duplicated patterns, and missing entry points.</p>
+    </div>
+
+    <div class="case-step">
+      <div class="case-step-top">
+        <div class="case-step-dot"></div>
+        <div class="case-step-title">Survey (411 responses)</div>
+      </div>
+      <p class="p">Validated pain points at scale and aligned stakeholders on what to fix first.</p>
+    </div>
+
+    <div class="case-step">
+      <div class="case-step-top">
+        <div class="case-step-dot"></div>
+        <div class="case-step-title">Iterative prototyping → delivery</div>
+      </div>
+      <p class="p">Explored IA options, converged on the simplest scalable model, supported implementation + QA.</p>
+    </div>
+  </div>
+
+  <details class="case-details">
+    <summary>What I looked at in the audit</summary>
+    <div class="case-details-body">
+      <ul class="bullets">
+        <li>Findability: can users predict where a feature lives?</li>
+        <li>Consistency: do similar actions behave the same across the product?</li>
+        <li>Effort: how many steps does a daily task really take?</li>
+      </ul>
+    </div>
+  </details>
+</section>
+
+<!-- Solutions -->
+<section class="section">
+  <h2 class="h2">What we changed</h2>
+
+  <div class="case-solution">
+    <div class="case-solution-text">
+      <h3 class="case-h3">1) Navigation that matches how people work</h3>
+      <p class="p">
+        We simplified the structure so the most common actions are one obvious step away.
+        Less hunting, fewer “where was that again?” moments.
+      </p>
+      <ul class="bullets">
+        <li>Clearer hierarchy + fewer competing entry points</li>
+        <li>Labels and placements became predictable across sections</li>
+        <li>Designed to scale as more features ship</li>
+      </ul>
+    </div>
+    <div class="case-solution-media">
+      <img src="assets/case-express-stage-audit.png" alt="Navigation & IA artifacts" />
+    </div>
+  </div>
+
+  <div class="case-solution">
+    <div class="case-solution-text">
+      <h3 class="case-h3">2) Before / After: everyday flows</h3>
+      <p class="p">
+        Instead of redesigning “everything”, we targeted the parts people touch daily: chats, calls, and switching contexts.
+      </p>
+      <div class="compare">
+        <div>
+          <div class="shot"><img src="assets/case-express-before.png" alt="Before redesign" /></div>
+          <div class="caption">Before</div>
+        </div>
+        <div>
+          <div class="shot"><img src="assets/case-express-after.png" alt="After redesign" /></div>
+          <div class="caption">After</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-solution">
+    <div class="case-solution-text">
+      <h3 class="case-h3">3) Design system to stop UI drift</h3>
+      <p class="p">
+        We built shared components and guidelines so the product stays consistent as teams ship.
+        This also made handoff smoother and delivery faster.
+      </p>
+      <ul class="bullets">
+        <li>Reusable components + tokens</li>
+        <li>Patterns for navigation, lists, actions, empty states</li>
+        <li>QA support to keep implementation aligned</li>
+      </ul>
+    </div>
+    <div class="case-solution-media">
+      <img src="assets/case-express-stage-proto.png" alt="Design system and prototypes" />
+    </div>
+  </div>
+</section>
+
+<!-- Impact -->
+<section class="section">
+  <h2 class="h2">Impact</h2>
+  <p class="p">
+    After rollout, we tracked usability outcomes and sentiment shifts. The biggest win was making daily actions faster and more predictable.
   </p>
 
   <div class="metrics">
     <div class="metric">
       <p class="num">+16 p.p. → 91%</p>
-      <p class="lbl">Effectiveness (task success rate in usability testing)</p>
+      <p class="lbl">Effectiveness (task success)</p>
     </div>
     <div class="metric">
       <p class="num">–32%</p>
-      <p class="lbl">Efficiency (reduced time-on-task + fewer steps across key workflows)</p>
+      <p class="lbl">Efficiency (less time-on-task)</p>
     </div>
     <div class="metric">
       <p class="num">4.2 → 4.4 / 5</p>
-      <p class="lbl">Satisfaction (in-product rating, 1–5 scale)</p>
+      <p class="lbl">Satisfaction</p>
     </div>
   </div>
 
   <div class="metrics" style="margin-top:14px;">
     <div class="metric">
       <p class="num">–19.9 → +14</p>
-      <p class="lbl">NPS (users highlighted easier navigation & more intuitive chat organization)</p>
+      <p class="lbl">NPS</p>
     </div>
     <div class="metric">
       <p class="num">~1.5×</p>
-      <p class="lbl">Faster delivery (design system reduced dev time and UI inconsistencies)</p>
+      <p class="lbl">Faster delivery (design system)</p>
     </div>
     <div class="metric">
       <p class="num">411</p>
-      <p class="lbl">Survey responses across roles & departments (internal)</p>
-    </div>
-  </div>
-
-  <div class="grid-2" style="margin-top:14px;">
-    <div class="card">
-      <h3 class="h2" style="font-size:16px;margin:0 0 10px;">Business value</h3>
-      <ul class="bullets">
-        <li>Lower support load due to fewer navigation-related issues</li>
-        <li>Better onboarding through clearer structure and discoverability</li>
-        <li>Retention uplift signals across large organizations (qualitative + support trends)</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3 class="h2" style="font-size:16px;margin:0 0 10px;">What I owned</h3>
-      <ul class="bullets">
-        <li>Research: UX audit + internal survey synthesis</li>
-        <li>Information architecture and navigation structure</li>
-        <li>UX/UI design and prototyping (web-first; mobile alignment in progress)</li>
-        <li>Co-founded and maintain the design system (components, tokens, guidelines)</li>
-      </ul>
+      <p class="lbl">Survey responses</p>
     </div>
   </div>
 </section>
 
-    <div class="divider"></div>
+<!-- My role -->
+<section class="section">
+  <h2 class="h2">My role</h2>
 
-    <!-- More projects -->
-    <section class="more">
-      <h3>More projects</h3>
-      <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
-        <a href="alfa.html">Alfa Digital →</a>
-        <a href="raiffeisen.html">Raiffeisen Invest →</a>
-        <a href="index.html#work">Back to Home →</a>
-      </div>
-    </section>
+  <div class="grid-2">
+    <div class="card">
+      <h3 class="case-h3">I owned</h3>
+      <ul class="bullets">
+        <li>UX audit + synthesis of internal feedback</li>
+        <li>Information architecture and navigation structure</li>
+        <li>UX/UI design and prototyping (web-first)</li>
+        <li>Design QA + keeping patterns consistent</li>
+      </ul>
+    </div>
 
-    <div class="footer-mini">
-      Designed and coded by Ekaterina Vakhrusheva · 2026
+    <div class="card">
+      <h3 class="case-h3">What I’d do next</h3>
+      <p class="p">
+        Keep tightening consistency as new features ship, expand system coverage, and continuously validate discoverability
+        (especially for new users and cross-platform flows).
+      </p>
     </div>
   </div>
-</body>
-</html>
+</section>
+
+<div class="divider"></div>
+
+<!-- More projects -->
+<section class="more">
+  <h3>More projects</h3>
+  <div class="more-links">
+    <a href="alfa.html">Alfa Digital →</a>
+    <a href="raiffeisen.html">Raiffeisen Invest →</a>
+    <a href="index.html#work">Back to Home →</a>
+  </div>
+</section>
+
+<div class="footer-mini">
+  Designed and coded by Ekaterina Vakhrusheva · 2026
+</div>
