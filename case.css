@@ -176,7 +176,7 @@
 }
 
 .case-overview-wrap{
-  max-width: 900px;
+  max-width: 600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -192,7 +192,7 @@
 }
 
 .case-overview-text p{
-  margin: 0 0 18px;
+  margin: 0 0 6px;
   font-size: 16px;
   line-height: 1.5;
   color: var(--text);
