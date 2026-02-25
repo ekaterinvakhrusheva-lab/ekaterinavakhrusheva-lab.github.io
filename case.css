@@ -793,3 +793,56 @@
     width: 100% !important;     /* на мобилке лучше во всю ширину */
   }
 }
+
+/* ===============================
+   IMPACT — editorial + big numbers
+   =============================== */
+
+.case-impact .case-overview-wrap{
+  max-width: 600px;
+}
+
+/* metrics grid */
+.case-impact-grid{
+  max-width: 1040px;       /* aligns with your content container */
+  margin: 28px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* item */
+.impact-item{
+  text-align: left;
+}
+
+/* big number highlight (like screen 3) */
+.impact-num{
+  font-size: 44px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  color: #7f9de0;
+  margin-bottom: 10px;
+}
+
+/* label under number */
+.impact-label{
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+/* responsive */
+@media (max-width: 980px){
+  .case-impact-grid{
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    gap: 22px;
+    padding: 0 20px;
+  }
+
+  .impact-num{
+    font-size: 36px;
+  }
+}
