@@ -139,6 +139,20 @@
   line-height:1.25;
 }
 
+.case-hero-media{
+  max-width: 1040px;
+  margin: 32px auto 0;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+}
+
+.case-hero-media img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
 /* ===============================
    ADDITIONS AFTER LINE ~140
    (readability + storytelling)
