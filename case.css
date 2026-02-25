@@ -390,12 +390,31 @@
   gap: 6px;
 }
 
-/* Card style: consistent with your system, but lighter */
+/* ===============================
+   Research cards — editorial style
+   =============================== */
+
 .case-research-card{
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-  padding: 20px;
+  position: relative;
+  padding: 24px 0 24px 24px;
+  background: transparent;
+  border: none;
+}
+
+/* thin vertical line */
+.case-research-card::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 24px;
+  bottom: 24px;
+  width: 2px;
+  background: rgba(255,255,255,.10);
+}
+
+/* subtle spacing between cards */
+.case-research-card + .case-research-card{
+  margin-top: 32px;
 }
 
 .case-research-top{
