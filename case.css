@@ -846,3 +846,46 @@
     font-size: 36px;
   }
 }
+
+/* ===============================
+   IMPACT — 2 columns + label style
+   =============================== */
+
+.case-impact-grid{
+  max-width: 1040px;
+  margin: 28px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* 2 columns */
+  gap: 44px 64px;                  /* row / column gaps */
+  align-items: start;
+}
+
+.impact-num{
+  font-size: 44px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  color: #7f9de0;
+  margin-bottom: 10px;
+}
+
+/* labels: white + 16px */
+.impact-label{
+  font-size: 16px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+/* responsive */
+@media (max-width: 980px){
+  .case-impact-grid{
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    gap: 24px;
+    padding: 0 20px;
+  }
+
+  .impact-num{
+    font-size: 36px;
+  }
+}
