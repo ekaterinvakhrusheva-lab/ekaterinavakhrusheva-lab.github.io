@@ -62,7 +62,6 @@
   <img src="assets/express-hero.png" alt="Express interface" />
 </div>
     
-    <!-- TL;DR -->
 <section class="section case-overview">
   <div class="case-overview-wrap">
 
@@ -87,51 +86,90 @@
   </div>
 </section>
       
-<!-- The story -->
-<section class="section">
-  <h2 class="h2">The story</h2>
+<!-- CHALLENGE -->
+<section class="section case-challenge">
+  <div class="case-overview-wrap">
+    <div class="case-overview-label">Challenge</div>
 
-  <div class="case-flow">
-    <div class="case-block">
-      <div class="case-kicker">Context</div>
-      <p class="p">
-        eXpress grew fast: messaging, calls, collaboration — features kept shipping, but the structure didn’t.
-        Over time, the UI started to feel “patchy”: different patterns, different entry points, and lots of extra steps.
+    <div class="case-overview-text">
+      <p>
+        eXpress hadn’t been redesigned in over 8 years. While the product was functionally robust,
+        the experience became harder to navigate over time — patterns diverged across modules,
+        key actions were buried, and everyday flows took too many steps.
+      </p>
+      <p>
+        The result was increased cognitive load: users spent time searching instead of communicating,
+        and new features were harder to discover and adopt.
       </p>
     </div>
+  </div>
+</section>
 
-    <div class="case-block">
-      <div class="case-kicker">What users felt</div>
-      <p class="p">
-        People weren’t “lost” in one big moment — they were slightly lost all day long.
-        Finding chats, starting calls, switching contexts… it added up.
-      </p>
+<!-- RESEARCH -->
+<section class="section case-research">
+  <div class="case-overview-wrap">
+    <div class="case-overview-label">Research</div>
 
-      <div class="case-quote">
-        <p class="case-quote-text">“I spend more time searching for chats than actually using them.”</p>
-        <div class="case-quote-meta">User feedback</div>
-      </div>
-    </div>
-
-    <div class="case-block">
-      <div class="case-kicker">Goal</div>
-      <p class="p">
-        Make everyday actions predictable and fast — without breaking enterprise constraints.
-        The focus was not on “prettier UI”, but on clarity, consistency, and scalability.
+    <div class="case-overview-text">
+      <p>
+        To understand what was slowing users down, I combined an audit of key journeys with scaled feedback
+        (survey + interviews), then iterated solutions through prototyping and usability testing.
       </p>
     </div>
   </div>
 
-  <details class="case-details">
-    <summary>Constraints (enterprise reality)</summary>
-    <div class="case-details-body">
+  <div class="case-research-grid">
+    <!-- 1 -->
+    <article class="case-research-card">
+      <div class="case-research-top">
+        <div class="case-research-num">1</div>
+        <h3 class="case-research-title">UX audit</h3>
+      </div>
       <ul class="bullets">
-        <li>Legacy code limited what could be refactored immediately</li>
-        <li>Customer theming: UI must support org-specific brand colors</li>
-        <li>Web-first rollout; mobile alignment followed with shared patterns</li>
+        <li>Usability & functionality baseline: 3.3 / 5</li>
+        <li>Overall UX below expectations</li>
+        <li>Mapped friction across chats, calls, and navigation</li>
       </ul>
-    </div>
-  </details>
+    </article>
+
+    <!-- 2 -->
+    <article class="case-research-card">
+      <div class="case-research-top">
+        <div class="case-research-num">2</div>
+        <h3 class="case-research-title">Interviews & Survey (411 users)</h3>
+      </div>
+      <div class="case-research-quotes">
+        <p class="case-quote-text">“Our goal is to attract as many large clients as possible.”</p>
+        <p class="case-quote-text">“I spend more time searching for chats than using them.”</p>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="case-research-card">
+      <div class="case-research-top">
+        <div class="case-research-num">3</div>
+        <h3 class="case-research-title">Iterative prototyping</h3>
+      </div>
+      <ul class="bullets">
+        <li>3 concept directions (layout, IA, features)</li>
+        <li>Low → high fidelity prototypes</li>
+        <li>Iterative feedback with PMs, Devs, and analysts</li>
+      </ul>
+    </article>
+
+    <!-- 4 -->
+    <article class="case-research-card">
+      <div class="case-research-top">
+        <div class="case-research-num">4</div>
+        <h3 class="case-research-title">Usability testing</h3>
+      </div>
+      <ul class="bullets">
+        <li>Task-based testing on interactive prototypes</li>
+        <li>Behavioral observation + think-aloud</li>
+        <li>Post-test metrics (SUS, NPS)</li>
+      </ul>
+    </article>
+  </div>
 </section>
 
 <!-- Discovery -->
