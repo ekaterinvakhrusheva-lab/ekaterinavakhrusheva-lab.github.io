@@ -378,16 +378,16 @@
 
 .case-challenge .case-overview-wrap,
 .case-research .case-overview-wrap{
-  max-width: 900px;
+  max-width: 600px;
 }
 
 /* Research grid like “2x2 cards” (screen 3 vibe) */
 .case-research-grid{
-  max-width: 1040px;
+  max-width: 600px;
   margin: 28px auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  gap: 6px;
 }
 
 /* Card style: consistent with your system, but lighter */
