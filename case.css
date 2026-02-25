@@ -73,7 +73,7 @@
    =============================== */
 
 .case-hero{
-  max-width: 1040px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 64px 20px 0;
   text-align:center;
@@ -176,30 +176,24 @@
 }
 
 .case-overview-wrap{
-  max-width: 1040px;
+  max-width: 900px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 40px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .case-overview-label{
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: .08em;
+  font-size:14px;
   color: var(--muted-2);
-  padding-top: 6px;
-}
-
-.case-overview-text{
-  max-width: 900px;
+  margin-bottom:6px;
+  font-weight: 700;
 }
 
 .case-overview-text p{
-  margin: 0 0 16px;
-  font-size: 18px;
-  line-height: 1.6;
+  margin: 0 0 18px;
+  font-size: 16px;
+  line-height: 1.5;
   color: var(--text);
 }
 
