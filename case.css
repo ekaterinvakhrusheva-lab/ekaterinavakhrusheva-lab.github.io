@@ -899,3 +899,11 @@
   margin: 24px auto 0 !important; /* центрируем блок */
   transform: none !important;     /* убираем translateX */
 }
+
+/* Center metrics block relative to text */
+
+.case-impact-grid{
+  max-width: 600px !important;   /* такая же ширина как у текста */
+  margin: 32px auto 0 !important;
+  grid-template-columns: 1fr 1fr; /* 2 колонки сохраняем */
+}
