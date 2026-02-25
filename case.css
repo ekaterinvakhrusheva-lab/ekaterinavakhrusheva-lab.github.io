@@ -490,3 +490,85 @@
     gap: 26px;
   }
 }
+
+/* ===============================
+   SOLUTION — editorial layout
+   =============================== */
+
+.case-solution-editorial{
+  margin-top: 120px;
+}
+
+.case-solution-block{
+  max-width: 1000px;
+  margin: 80px auto 0;
+}
+
+.case-solution-title{
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+}
+
+.case-solution-text{
+  max-width: 800px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 40px;
+}
+
+/* Before / After layout */
+
+.case-before-after{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.case-shot-label{
+  font-size: 13px;
+  color: var(--muted-2);
+  margin-bottom: 12px;
+}
+
+.case-shot img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Single image block */
+
+.case-single-shot{
+  margin-top: 24px;
+}
+
+.case-single-shot img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* responsive */
+
+@media (max-width: 980px){
+  .case-before-after{
+    grid-template-columns: 1fr;
+  }
+
+  .case-solution-block{
+    margin-top: 60px;
+  }
+
+  .case-solution-title{
+    font-size: 22px;
+  }
+
+  .case-solution-text{
+    font-size: 16px;
+  }
+}
