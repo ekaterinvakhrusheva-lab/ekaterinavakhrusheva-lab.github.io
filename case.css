@@ -907,3 +907,62 @@
   margin: 32px auto 0 !important;
   grid-template-columns: 1fr 1fr; /* 2 колонки сохраняем */
 }
+/* ===============================
+   FINAL FIX: Solution images stay inside 1120px content container
+   =============================== */
+
+.case-before-after,
+.case-single-shot{
+  width: 100% !important;
+  max-width: 1120px !important;     /* <-- твой контейнер */
+  margin: 24px auto 0 !important;
+  transform: none !important;
+}
+
+/* Before/After layout inside container */
+.case-before-after{
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* labels: centered, 6px from image */
+.case-shot-label{
+  text-align: center !important;
+  margin: 0 0 6px !important;
+}
+
+/* images: fill column width, same height, no cropping */
+.case-shot img{
+  width: 100% !important;
+  height: 320px !important;
+  object-fit: contain !important;   /* no cropping */
+  display: block;
+  border-radius: 0 !important;
+}
+
+/* single image: full container width */
+.case-single-shot img{
+  width: 100% !important;
+  height: 420px !important;
+  object-fit: contain !important;
+  display: block;
+  border-radius: 0 !important;
+}
+
+/* responsive */
+@media (max-width: 980px){
+  .case-before-after{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .case-shot img{
+    height: 260px !important;
+  }
+
+  .case-single-shot img{
+    height: 320px !important;
+  }
+}
