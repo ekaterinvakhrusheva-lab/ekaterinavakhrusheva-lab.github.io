@@ -496,27 +496,27 @@
    =============================== */
 
 .case-solution-editorial{
-  margin-top: 120px;
+  margin-top: 80px;
 }
 
 .case-solution-block{
-  max-width: 1000px;
+  max-width: 600px;
   margin: 80px auto 0;
 }
 
 .case-solution-title{
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 600;
   letter-spacing: -0.02em;
-  margin: 0 0 16px;
+  margin: 0 0 12px;
 }
 
 .case-solution-text{
-  max-width: 800px;
-  font-size: 18px;
-  line-height: 1.6;
+  max-width: 600px;
+  font-size: 16px;
+  line-height: 1.5;
   color: var(--text);
-  margin: 0 0 40px;
+  margin: 0 0 80px;
 }
 
 /* Before / After layout */
@@ -565,7 +565,7 @@
   }
 
   .case-solution-title{
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .case-solution-text{
