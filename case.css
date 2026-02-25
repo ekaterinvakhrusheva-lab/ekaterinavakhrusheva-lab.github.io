@@ -371,37 +371,42 @@
   }
 }
 
-
 /* ===============================
-   CHALLENGE + RESEARCH (new layout)
+   CHALLENGE + RESEARCH (final)
    =============================== */
 
+/* keep text blocks consistent (800px already set above, but enforce here too) */
 .case-challenge .case-overview-wrap,
 .case-research .case-overview-wrap{
-  max-width: 600px;
+  max-width: 800px;
 }
 
-/* Research grid like “2x2 cards” (screen 3 vibe) */
+/* Research grid — 2x2 with equal row heights (so lines match) */
 .case-research-grid{
-  max-width: 600px;
+  max-width: 800px;
   margin: 28px auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6px;
+  gap: 40px;
+  align-items: stretch;
 }
 
-/* ===============================
-   Research cards — editorial style
-   =============================== */
-
+/* Research card — editorial style with a thin left line */
 .case-research-card{
   position: relative;
   padding: 24px 0 24px 24px;
   background: transparent;
   border: none;
+
+  /* important: stretch to row height so the line is consistent */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  text-align: left;
 }
 
-/* thin vertical line */
+/* thin vertical line (same top/bottom across cards) */
 .case-research-card::before{
   content: "";
   position: absolute;
@@ -412,68 +417,76 @@
   background: rgba(255,255,255,.10);
 }
 
-/* subtle spacing between cards */
-.case-research-card + .case-research-card{
-  margin-top: 32px;
-}
-
+/* title row */
 .case-research-top{
-  display: flex;
-  align-items: left;
-  gap: 12px;
-  margin-bottom: 12px;
+  display: block;
+  margin-bottom: 14px;
 }
 
+/* hide numbering if it still exists in HTML */
 .case-research-num{
-  width: 34px;
-  height: 34px;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: left;
-  justify-content: center;
-  font-weight: 700;
-  color: var(--text);
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.10);
+  display: none !important;
 }
 
 .case-research-title{
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: -0.01em;
 }
 
-/* Quotes inside the survey card */
+/* Dash list (—) instead of bullets */
+.case-dash-list p{
+  margin: 0 0 10px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+}
+.case-dash-list p:last-child{
+  margin-bottom: 0;
+}
+
+/* If some cards still use <ul class="bullets"> — neutralize bullets */
+.case-research-card .bullets{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.case-research-card .bullets li{
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.case-research-card .bullets li::before{
+  content: "— ";
+  color: var(--text);
+}
+
+/* Quotes: no background, bold, #7f9de0 */
 .case-research-quotes{
-  border-radius: var(--radius-lg);
-  background: rgba(127,157,224,.10);
-  border: 1px solid rgba(127,157,224,.20);
-  padding: 14px;
+  margin-top: 6px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  text-align: left;
 }
 
 .case-research-quotes .case-quote-text{
-  margin: 0 0 10px;
-  font-size: 14px;
+  margin: 0 0 12px;
+  font-size: 16px;
   line-height: 1.6;
-  color: var(--text);
+  font-weight: 700;
+  color: #7f9de0;
 }
 
 .case-research-quotes .case-quote-text:last-child{
   margin-bottom: 0;
 }
 
-/* bullets inside research cards: tighter spacing */
-.case-research-card .bullets{
-  margin-top: 0;
-}
-
-.case-research-card .bullets li{
-  margin: 6px 0;
-}
-
 /* responsive */
 @media (max-width: 980px){
   .case-research-grid{
     grid-template-columns: 1fr;
+    gap: 26px;
   }
 }
