@@ -377,3 +377,91 @@
     padding: 14px;
   }
 }
+
+
+/* ===============================
+   CHALLENGE + RESEARCH (new layout)
+   =============================== */
+
+.case-challenge .case-overview-wrap,
+.case-research .case-overview-wrap{
+  max-width: 900px;
+}
+
+/* Research grid like “2x2 cards” (screen 3 vibe) */
+.case-research-grid{
+  max-width: 1040px;
+  margin: 28px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* Card style: consistent with your system, but lighter */
+.case-research-card{
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  padding: 20px;
+}
+
+.case-research-top{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.case-research-num{
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--text);
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+}
+
+.case-research-title{
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+
+/* Quotes inside the survey card */
+.case-research-quotes{
+  border-radius: var(--radius-lg);
+  background: rgba(127,157,224,.10);
+  border: 1px solid rgba(127,157,224,.20);
+  padding: 14px;
+}
+
+.case-research-quotes .case-quote-text{
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.case-research-quotes .case-quote-text:last-child{
+  margin-bottom: 0;
+}
+
+/* bullets inside research cards: tighter spacing */
+.case-research-card .bullets{
+  margin-top: 0;
+}
+
+.case-research-card .bullets li{
+  margin: 6px 0;
+}
+
+/* responsive */
+@media (max-width: 980px){
+  .case-research-grid{
+    grid-template-columns: 1fr;
+  }
+}
