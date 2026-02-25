@@ -155,7 +155,19 @@
   display: block;
   border-radius: 0;
   border: none;
+  
 }
+
+.no-frame{
+  border-radius: 0 !important;
+  border: none !important;
+  overflow: visible !important;
+}
+
+.no-frame img{
+  border-radius: 0 !important;
+}
+
 /* ===============================
    ADDITIONS AFTER LINE ~140
    (readability + storytelling)
