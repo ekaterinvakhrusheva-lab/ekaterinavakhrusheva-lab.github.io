@@ -2,55 +2,95 @@
 
 /* layout */
 .case-wrap{
-  max-width: 1040px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 36px 20px 56px;
+  padding: 28px 20px 32px;
 }
-
-/* =========================
-   TOP NAV (same pill as Home)
-   ========================= */
-
-.nav.case-nav{
+.nav{
   position: sticky;
   top: 14px;
   z-index: 1000;
-
-  display: flex;
-  justify-content: center;
-
+  display:flex;
+  justify-content:center;
+  
   background: transparent;
+  backdrop-filter: none;
   padding: 0;
-  margin: 10px 0 0;
-
-  /* container shouldn't block clicks/selection on content below */
+  margin-top: 6px;
   pointer-events: none;
 }
 
-/* only these are clickable */
+.nav-pill{
+  pointer-events: auto;
+
+  display:flex;
+  gap: 6px;
+  padding: 8px;
+  border-radius: 999px;
+
+  border: 0;
+  background: #1A1A1A;
+  box-shadow:
+    0 14px 30px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+.nav-pill a{
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: rgba(242,242,242,.70);
+  transition: background .15s ease, color .15s ease;
+}
+
+.nav-pill a:hover{
+  background: rgba(255,255,255,.07);
+  color: #ffffff;
+}
+
+.nav-pill a.active{
+  background: rgba(150,100,255,.30);
+  color: #ffffff;
+}
+
 .nav.case-nav .nav-pill,
 .nav.case-nav .back-link{
   pointer-events: auto;
 }
 
-/* Back link doesn't affect centering */
 .nav.case-nav .back-link{
+  pointer-events: auto;
+
   position: absolute;
   left: 18px;
   top: 50%;
   transform: translateY(-50%);
 
-  text-decoration: none;
-  font-size: 14px;
-  color: rgba(242,242,242,.80);
-  background: rgba(255,255,255,.04);
-  padding: 10px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  /* === same visual style as .nav-pill === */
+  padding: 8px 14px;
   border-radius: 999px;
-}
-.nav.case-nav .back-link:hover{
-  background: rgba(255,255,255,.06);
+
+  border: 0;
+  background: #1A1A1A;
+  box-shadow:
+    0 14px 30px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,255,255,.05);
+
+  font-size: 14px;
+  color: rgba(242,242,242,.70);
+  text-decoration: none;
+
+  transition: background .15s ease, color .15s ease;
 }
 
+.nav.case-nav .back-link:hover{
+  background: rgba(255,255,255,.07);
+  color: #ffffff;
+}
 /* HERO like reference */
 .case-hero{
   max-width: 1040px;
