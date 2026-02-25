@@ -889,3 +889,13 @@
     font-size: 36px;
   }
 }
+
+/* Fix: Before/After should follow content container, not viewport */
+
+.case-before-after,
+.case-single-shot{
+  width: 100% !important;
+  max-width: 1040px !important;   /* поставь здесь ширину твоего общего контейнера */
+  margin: 24px auto 0 !important; /* центрируем блок */
+  transform: none !important;     /* убираем translateX */
+}
