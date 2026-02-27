@@ -648,3 +648,19 @@
     gap: 18px;
   }
 }
+
+
+/* Full-width image inside 1120 content container */
+.case-media-full{
+  max-width: 1120px;
+  width: 100%;
+  margin: 24px auto 0;
+}
+
+.case-img-full{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  object-fit: contain; /* ничего не режем */
+}
