@@ -714,3 +714,76 @@
     flex: 1 1 48%;
   }
 }
+
+/* ===============================
+   Impact (600 copy + 1120 metrics)
+   =============================== */
+
+.case-impact{
+  margin-top: 80px; /* если у тебя общий spacing 80px */
+}
+
+.impact-copy{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.impact-text{
+  margin-top: 6px;
+}
+
+.impact-metrics{
+  max-width: 1120px;
+  margin: 28px auto 0; /* расстояние от текста до карточек */
+  padding: 0 20px;     /* чтобы на узких экранах не липло к краям */
+}
+
+.impact-row{
+  display: flex;
+  gap: 12px;           /* меньше расстояние между карточками */
+}
+
+.impact-card{
+  flex: 1;
+  padding: 30px 16px;  /* чтобы контент “занимал больше” */
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  text-align: center;
+}
+
+/* убираем hover полностью */
+.impact-card:hover{
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.06);
+}
+
+.impact-value{
+  font-size: 44px;
+  font-weight: 600;
+  color: #7C9CFF;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.impact-label{
+  font-size: 16px;
+  color: #ffffff;
+  opacity: 0.85;
+}
+
+/* адаптив */
+@media (max-width: 980px){
+  .impact-row{
+    flex-wrap: wrap;
+  }
+  .impact-card{
+    flex: 1 1 calc(50% - 6px);
+  }
+}
+
+@media (max-width: 560px){
+  .impact-card{
+    flex: 1 1 100%;
+  }
+}
