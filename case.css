@@ -488,3 +488,50 @@
     padding: 12px;
   }
 }
+
+/* Solution: text stays 600px, images go full container (1120px) */
+
+.case-solution-block{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* вытаскиваем before/after из ограничения 600px */
+.case-solution-block .case-before-after{
+  max-width: 1120px;
+  width: 100%;
+  margin: 24px auto 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.case-solution-block .case-shot{
+  width: 100%;
+  min-width: 0;
+}
+
+.case-solution-block .case-shot-label{
+  text-align: center;
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: var(--muted-2);
+}
+
+/* картинки тянутся по ширине колонки, высота от ширины, ничего не обрезаем */
+.case-solution-block .case-shot img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
+
+/* mobile */
+@media (max-width: 980px){
+  .case-solution-block .case-before-after{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
