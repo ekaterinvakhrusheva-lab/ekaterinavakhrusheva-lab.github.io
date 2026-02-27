@@ -149,7 +149,8 @@
 
 .case-hero-media{
   max-width: 1120px;
-  margin: 32px auto 0;
+  margin: 60px auto 0;
+  border-radius: none;
   overflow: hidden;
   border: none;
   background: transparent;
@@ -572,6 +573,75 @@
 }
 
 /* Мобильная версия */
+@media (max-width: 980px){
+  .case-before-after{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+/* ===============================
+   Solution (OVERRIDE)
+   Keep text at 600px, keep media at 1120px
+   =============================== */
+
+.case-solution-block{
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* узкая колонка под текст */
+.case-solution-copy{
+  max-width: 600px;
+  margin: 0 auto;         /* <- важно: центрируем сам блок */
+}
+
+/* на всякий случай ограничиваем и сами заголовки/текст,
+   даже если вдруг где-то забудется wrapper */
+.case-solution-title,
+.case-solution-text{
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* типографика как ты просила */
+.case-solution-title{
+  font-size: 22px;
+}
+
+.case-solution-text{
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* before/after — на всю ширину контейнера */
+.case-before-after{
+  max-width: 1120px;
+  width: 100%;
+  margin: 24px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* подписи — центр + 6px до картинки */
+.case-shot-label{
+  text-align: center;
+  margin: 0 0 6px;
+}
+
+/* картинки — НЕ обрезаем */
+.case-shot img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  object-fit: contain;
+}
+
 @media (max-width: 980px){
   .case-before-after{
     grid-template-columns: 1fr;
