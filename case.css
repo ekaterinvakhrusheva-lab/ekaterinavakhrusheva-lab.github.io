@@ -217,16 +217,16 @@
 
 .case-research-grid{
   max-width: 1140px; 
-  margin: 24px auto 0;
+  margin: 32px auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 40px;
   align-items: stretch;
 }
 
 .case-research-card{
   position: relative;
-  padding: 24px 0 24px 24px;
+  padding: 16px 0 16px 16px;
   background: transparent;
   border: none;
 
@@ -240,15 +240,15 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 24px;
-  bottom: 24px;
-  width: 2px;
-  background: rgba(255,255,255,.10);
+  top: 16px;
+  bottom: 16px;
+  width: 4px;
+  background: #7f9de0;
 }
 
 .case-research-top{
   display: block;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .case-research-title{
@@ -259,7 +259,7 @@
 
 /* Dash list (—) */
 .case-dash-list p{
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   font-size: 16px;
   line-height: 1.5;
   color: var(--text);
@@ -268,7 +268,7 @@
 
 /* Quotes: no background, bold, #7f9de0 */
 .case-research-quotes{
-  margin-top: 6px;
+  margin-top: 8px;
   padding: 0;
   border: none;
   background: transparent;
@@ -276,7 +276,7 @@
 }
 
 .case-research-quotes .case-quote-text{
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 600;
@@ -288,7 +288,7 @@
   .case-research-grid{
     grid-template-columns: 1fr;
     gap: 24px;
-    padding: 0 20px;
+    padding: 0 16px;
   }
 }
 
