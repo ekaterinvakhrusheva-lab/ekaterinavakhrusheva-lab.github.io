@@ -119,7 +119,7 @@
    =============================== */
 
 .case-meta-line{
-  max-width:1120px; /* 1040 -> 1120 */
+  max-width:1120px;
   margin:32px auto 0;
   padding-top:32px;
   border-top:1px solid var(--border);
@@ -131,9 +131,9 @@
 
 .meta-k{
   font-size:14px;
-  color: var(--muted-2);
+  color: var(--muted);
   margin-bottom:6px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .meta-v{
@@ -144,12 +144,12 @@
 
 
 /* ===============================
-   Hero media (no frame)
+   Hero media
    =============================== */
 
 .case-hero-media{
-  max-width: 1120px; /* 1040 -> 1120 */
-  margin: 60px auto 0;
+  max-width: 1120px;
+  margin: 32px auto 0;
   overflow: hidden;
   border: none;
   background: transparent;
@@ -181,23 +181,22 @@
 .case-overview,
 .case-challenge,
 .case-research{
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .case-overview-wrap{
-  max-width: 600px; /* final: 600 for Overview/Challenge/Research/Impact/Afterword */
+  max-width: 600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 6px; /* label -> text distance */
+  gap: 6px; 
 }
 
 /* small section label */
 .case-overview-label{
   font-size: 14px;
-  color: var(--muted-2);
-  font-weight: 700;
-  letter-spacing: .02em;
+  color: var(--muted);
+  font-weight: 600;
   text-align: left;
 }
 
@@ -217,11 +216,11 @@
    =============================== */
 
 .case-research-grid{
-  max-width: 800px; /* cards block wider than intro text (as сейчас) */
-  margin: 28px auto 0;
+  max-width: 1140px; 
+  margin: 24px auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 32px;
   align-items: stretch;
 }
 
@@ -261,8 +260,8 @@
 /* Dash list (—) */
 .case-dash-list p{
   margin: 0 0 10px;
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.5;
   color: var(--text);
 }
 .case-dash-list p:last-child{ margin-bottom: 0; }
@@ -279,23 +278,23 @@
 .case-research-quotes .case-quote-text{
   margin: 0 0 12px;
   font-size: 16px;
-  line-height: 1.6;
-  font-weight: 700;
+  line-height: 1.5;
+  font-weight: 600;
   color: #7f9de0;
 }
 .case-research-quotes .case-quote-text:last-child{ margin-bottom: 0; }
 
-@media (max-width: 980px){
+@media (max-width: 1140px){
   .case-research-grid{
     grid-template-columns: 1fr;
-    gap: 26px;
+    gap: 24px;
     padding: 0 20px;
   }
 }
 
 
 /* ===============================
-   Solution — editorial
+   Solution
    =============================== */
 
 .case-solution-editorial{
@@ -329,9 +328,9 @@
 
 .case-solution-text{
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--text);
-  margin: 0 0 24px;
+  margin: 0 0 32px;
   text-align: left;
 }
 
@@ -339,7 +338,7 @@
 .case-before-after,
 .case-single-shot{
   width: 100%;
-  max-width: 1120px; /* 1040 -> 1120 */
+  max-width: 1120px;
   margin: 24px auto 0;
   transform: none;
 }
@@ -348,7 +347,7 @@
 .case-before-after{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 24px;
   align-items: start;
 }
 
@@ -359,15 +358,15 @@
   width: 100%;
   text-align: center;
   margin: 0 0 6px;
-  font-size: 13px;
-  color: var(--muted-2);
+  font-size: 14px;
+  color: var(--muted);
 }
 
 /* Before/After images: equal height, fill column width, no rounding, no cropping */
 .case-shot img{
   width: 100%;
-  height: 320px;
-  object-fit: contain; /* keep all content */
+  height: 420px;
+  object-fit: contain; 
   display: block;
   border-radius: 0;
   background: transparent;
@@ -383,10 +382,10 @@
   background: transparent;
 }
 
-@media (max-width: 980px){
+@media (max-width: 1140px){
   .case-before-after{
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 16px;
   }
 
   .case-shot img{ height: 260px; }
@@ -403,7 +402,7 @@
 }
 
 .case-impact-grid{
-  max-width: 600px;       /* align to intro text */
+  max-width: 600px;  
   margin: 32px auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -411,13 +410,13 @@
   align-items: start;
 }
 
-.impact-item{ text-align: left; }
+.impact-item{ text-align: center; }
 
 .impact-num{
   font-size: 44px;
   line-height: 1.05;
   letter-spacing: -0.03em;
-  font-weight: 700;
+  font-weight: 600;
   color: #7f9de0;
   margin-bottom: 10px;
 }
@@ -425,11 +424,11 @@
 /* labels: white + 16px */
 .impact-label{
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #fff;
 }
 
-@media (max-width: 980px){
+@media (max-width: 1140px){
   .case-impact-grid{
     grid-template-columns: 1fr;
     gap: 24px;
@@ -492,13 +491,13 @@
 
 /* Footer — match style.css */
 .footer{
-  margin-top: 100px;
+  margin-top: 80px;
   text-align: center;
   color: var(--muted-2);
   font-size: 12px;
 }
 
-@media (max-width: 980px){
+@media (max-width: 1140px){
   .case-more-links{
     border-radius: 18px;
     padding: 12px;
