@@ -335,62 +335,43 @@
   text-align: left;
 }
 
-/* Image rows should use full content container width (1120) */
-.case-before-after,
-.case-single-shot{
-  width: 100%;
-  max-width: 1120px;
-  margin: 24px auto 0;
-  transform: none;
-}
-
-/* Before/After grid */
 .case-before-after{
+  max-width: 1120px;
+  width: 100%;
+  margin: 24px auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 40px;
   align-items: start;
 }
 
-.case-shot{ width: 100%; }
-
-/* Labels: centered, 6px from images */
+/* подписи */
 .case-shot-label{
-  width: 100%;
   text-align: center;
   margin: 0 0 6px;
-  font-size: 14px;
-  color: var(--muted);
+  font-size: 13px;
+  color: var(--muted-2);
 }
 
-/* Before/After images: equal height, fill column width, no rounding, no cropping */
 .case-shot img{
   width: 100%;
-  height: 420px;
-  object-fit: contain; 
-  display: block;
-  border-radius: 0;
-  background: transparent;
-}
-
-/* Single image: full width of container, consistent height */
-.case-single-shot img{
-  width: 100%;
-  height: 420px;
+  height: 360px;          
   object-fit: contain;
   display: block;
   border-radius: 0;
   background: transparent;
 }
 
-@media (max-width: 1140px){
+/* мобильная версия */
+@media (max-width: 980px){
   .case-before-after{
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 20px;
   }
 
-  .case-shot img{ height: 260px; }
-  .case-single-shot img{ height: 320px; }
+  .case-shot img{
+    height: 280px;
+  }
 }
 
 
