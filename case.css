@@ -664,3 +664,58 @@
   border-radius: 0;
   object-fit: contain; /* ничего не режем */
 }
+
+/* ===============================
+   Impact — compact metric cards
+   =============================== */
+
+.impact-grid{
+  max-width: 600px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.impact-card{
+  padding: 24px 20px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  text-align: center;
+  transition: background 0.2s ease, border 0.2s ease;
+}
+
+.impact-card:hover{
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.impact-value{
+  font-size: 36px;
+  font-weight: 600;
+  color: #7C9CFF; /* можешь заменить на свой акцентный цвет */
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.impact-label{
+  font-size: 14px;
+  color: #ffffff;
+  opacity: 0.75;
+}
+
+/* последняя карточка на всю ширину */
+.impact-wide{
+  grid-column: span 2;
+}
+
+/* адаптив */
+@media (max-width: 640px){
+  .impact-grid{
+    grid-template-columns: 1fr;
+  }
+  .impact-wide{
+    grid-column: span 1;
+  }
+}
