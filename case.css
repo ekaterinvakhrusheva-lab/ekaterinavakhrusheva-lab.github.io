@@ -20,6 +20,15 @@
   margin-top: 6px;
 }
 
+/* Ensure case page nav remains clickable even if global .nav disables pointer events */
+.case-nav{
+  pointer-events: auto;
+}
+
+.back-link{
+  pointer-events: auto;
+}
+
 .nav-pill{
   pointer-events: auto;
   display:flex;
@@ -82,7 +91,17 @@
   }
 
   .back-link{
-    padding:8px 10px;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    gap: 0;
+    justify-content: center;
+    border-radius: 999px; /* circle */
+  }
+
+  .back-arrow{
+    line-height: 1;
+    display: inline-block;
   }
 }
 
@@ -553,8 +572,9 @@
     border-radius: 999px;
     padding: 10px;
   }
-   
-   @media (max-width: 520px){
+}
+
+@media (max-width: 520px){
   .case-more-links{
     width: 100%;
     justify-content: center;
