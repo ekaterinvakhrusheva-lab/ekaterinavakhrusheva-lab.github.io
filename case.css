@@ -341,22 +341,25 @@
   margin: 24px auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 24px;         
   align-items: start;
 }
 
-/* подписи */
+.case-shot{
+  width: 100%;
+  min-width: 0;    
+}
+
 .case-shot-label{
   text-align: center;
-  margin: 0 0 6px;
+  margin: 0 0 6px;  
   font-size: 13px;
   color: var(--muted-2);
 }
 
 .case-shot img{
   width: 100%;
-  height: 360px;          
-  object-fit: contain;
+  height: auto;  
   display: block;
   border-radius: 0;
   background: transparent;
