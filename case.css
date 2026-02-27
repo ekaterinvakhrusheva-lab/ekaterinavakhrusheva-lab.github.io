@@ -541,3 +541,12 @@
     padding: 12px;
   }
 }
+
+/* FIX: Solution #3 copy width (Consistency & Scalability) */
+.case-solution-block .case-solution-title,
+.case-solution-block .case-solution-text{
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
