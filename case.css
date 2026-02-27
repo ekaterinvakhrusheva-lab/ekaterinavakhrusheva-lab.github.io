@@ -347,7 +347,7 @@
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px; /* requested */
+  gap: 12px;
   align-items: start;
 }
 
@@ -377,7 +377,7 @@
 @media (max-width: 980px){
   .case-before-after{
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 12px;
   }
 }
 
@@ -428,7 +428,7 @@
 .impact-row{
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px; /* меньше расстояние */
+  gap: 12px;
 }
 
 .impact-card{
