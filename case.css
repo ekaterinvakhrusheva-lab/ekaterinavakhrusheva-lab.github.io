@@ -1,3 +1,4 @@
+
 /* ===============================
    Layout
    =============================== */
@@ -8,7 +9,7 @@
   padding: 28px 20px 32px;
 }
 
-/* Sticky nav (same as Home) */
+/* Sticky nav*/
 .nav{
   position: sticky;
   top: 14px;
@@ -150,7 +151,6 @@
 .case-hero-media{
   max-width: 1120px;
   margin: 60px auto 0;
-  border-radius: none;
   overflow: hidden;
   border: none;
   background: transparent;
@@ -176,12 +176,16 @@
 
 
 /* ===============================
-   Section spacing + shared text block
+   Section spacing + shared copy block
    =============================== */
 
 .case-overview,
 .case-challenge,
-.case-research{
+.case-research,
+.case-solution-editorial,
+.case-impact,
+.case-afterword,
+.case-more{
   margin-top: 80px;
 }
 
@@ -190,7 +194,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 6px; 
+  gap: 6px;
 }
 
 /* small section label */
@@ -213,11 +217,11 @@
 
 
 /* ===============================
-   Research (4 cards with thin left line)
+   Research (4 blocks with thin left line)
    =============================== */
 
 .case-research-grid{
-  max-width: 1140px; 
+  max-width: 1120px;
   margin: 32px auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -243,8 +247,8 @@
   left: 0;
   top: 16px;
   bottom: 16px;
-  width: 4px;
-  background: #7f9de0;
+  width: 1px; /* тонкая линия */
+  background: rgba(127,157,224,.9);
 }
 
 .case-research-top{
@@ -256,7 +260,7 @@
   margin: 0;
   font-size: 16px;
   letter-spacing: -0.01em;
-   weight: 600;
+  font-weight: 600;
 }
 
 /* Dash list (—) */
@@ -286,34 +290,42 @@
 }
 .case-research-quotes .case-quote-text:last-child{ margin-bottom: 0; }
 
-@media (max-width: 1140px){
+@media (max-width: 980px){
   .case-research-grid{
     grid-template-columns: 1fr;
     gap: 24px;
-    padding: 0 16px;
   }
 }
 
 
 /* ===============================
-   Solution
+   Solution (copy 600px + media 1120px)
    =============================== */
 
-.case-solution-editorial{
-  margin-top: 80px;
-}
-
-/* Solution label block — 6px gap to next content */
+/* label block — keep 6px gap to next content */
 .case-solution-editorial > .case-overview-wrap{
   margin: 0 auto 6px;
 }
 
-/* spacing between meaning blocks */
+/* spacing between solution blocks */
 .case-solution-block + .case-solution-block{
   margin-top: 80px;
 }
 
-/* Titles & text */
+/* each solution block uses full container,
+   but the copy inside is 600px */
+.case-solution-block{
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* copy wrapper (keeps text at 600px) */
+.case-solution-copy{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* typography */
 .case-solution-title{
   font-size: 22px;
   font-weight: 600;
@@ -326,96 +338,143 @@
   font-size: 16px;
   line-height: 1.5;
   color: var(--text);
-  margin: 0 0 32px;
+  margin: 0 0 24px;
   text-align: left;
 }
 
+/* Before / After area — full width of 1120 container */
 .case-before-after{
-  max-width: 1120px;
   width: 100%;
-  margin: 24px auto 0;
+  margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;         
+  gap: 24px; /* requested */
   align-items: start;
 }
 
 .case-shot{
   width: 100%;
-  min-width: 0;    
+  min-width: 0;
 }
 
 .case-shot-label{
   text-align: center;
-  margin: 0 0 6px;  
+  margin: 0 0 6px; /* requested: 6px to image */
   font-size: 13px;
   color: var(--muted-2);
 }
 
+/* images scale by width, height follows naturally */
 .case-shot img{
   width: 100%;
-  height: auto;  
+  height: auto;
   display: block;
   border-radius: 0;
-  background: transparent;
+  border: none;
+  object-fit: contain; /* safe: no cropping if any height is ever constrained */
 }
 
-/* мобильная версия */
 @media (max-width: 980px){
   .case-before-after{
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 18px;
   }
+}
 
-  .case-shot img{
-    height: 280px;
-  }
+/* full-width single image inside container */
+.case-media-full{
+  width: 100%;
+  margin: 0;
+}
+
+.case-img-full{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  border: none;
+  object-fit: contain;
 }
 
 
 /* ===============================
-   Impact — 2 columns, centered to text width
+   Impact (copy 600px + cards 1120px)
    =============================== */
 
-.case-impact .case-overview-wrap{
+.case-impact{
+  text-align: left; /* important: prevent accidental center inheritance */
+}
+
+.impact-copy{
   max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-.case-impact-grid{
-  max-width: 600px;  
-  margin: 32px auto 0;
+.impact-text{
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255,255,255,.92);
+  text-align: left;
+}
+
+/* cards area full width of container */
+.impact-metrics{
+  max-width: 1120px;
+  margin: 28px auto 0;
+}
+
+.impact-row{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 44px 64px;
-  align-items: start;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px; /* меньше расстояние */
 }
 
-.impact-item{ text-align: center; }
+.impact-card{
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  padding: 28px 18px; /* больше заполнение */
+  min-height: 132px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 
-.impact-num{
-  font-size: 44px;
+  transition: none !important; /* no hover animations */
+}
+
+.impact-card:hover{
+  transform: none !important;
+  box-shadow: none !important;
+  background: rgba(255,255,255,.04) !important;
+  border-color: rgba(255,255,255,.08) !important;
+}
+
+.impact-value{
+  font-size: 46px;
   line-height: 1.05;
-  letter-spacing: -0.03em;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: #7f9de0;
   margin-bottom: 10px;
 }
 
-/* labels: white + 16px */
 .impact-label{
-  font-size: 16px;
-  line-height: 1.5;
-  color: #fff;
+  font-size: 16px; /* requested */
+  line-height: 1.25;
+  font-weight: 600;
+  color: #ffffff; /* requested */
+  opacity: .92;
 }
 
-@media (max-width: 1140px){
-  .case-impact-grid{
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 0 20px;
-  }
+@media (max-width: 980px){
+  .impact-row{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
-  .impact-num{ font-size: 36px; }
+@media (max-width: 520px){
+  .impact-row{ grid-template-columns: 1fr; }
 }
 
 
@@ -427,7 +486,6 @@
   max-width: 600px;
 }
 
-/* More projects */
 .case-more{
   text-align: center;
 }
@@ -469,7 +527,7 @@
   transform: translateY(-1px);
 }
 
-/* Footer */
+/* Footer — keep aligned to your global style variables */
 .footer{
   margin-top: 80px;
   text-align: center;
@@ -482,467 +540,4 @@
     border-radius: 18px;
     padding: 12px;
   }
-}
-
-/* Solution: text stays 600px, images go full container (1120px) */
-
-.case-solution-block{
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* вытаскиваем before/after из ограничения 600px */
-.case-solution-block .case-before-after{
-  max-width: 1120px;
-  width: 100%;
-  margin: 24px auto 0;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  align-items: start;
-}
-
-.case-solution-block .case-shot{
-  width: 100%;
-  min-width: 0;
-}
-
-.case-solution-block .case-shot-label{
-  text-align: center;
-  margin: 0 0 6px;
-  font-size: 13px;
-  color: var(--muted-2);
-}
-
-/* картинки тянутся по ширине колонки, высота от ширины, ничего не обрезаем */
-.case-solution-block .case-shot img{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0;
-}
-
-/* mobile */
-@media (max-width: 980px){
-  .case-solution-block .case-before-after{
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-}
-
-/* ===============================
-   Solution layout: text 600px, images 1120px
-   =============================== */
-
-/* Весь solution-блок = ширина контейнера */
-.case-solution-block{
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
-/* Только текст ограничиваем */
-.case-solution-copy{
-  max-width: 600px;
-}
-
-/* Before / After = вся ширина контейнера */
-.case-before-after{
-  width: 100%;
-  margin: 24px 0 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  align-items: start;
-}
-
-/* Подписи */
-.case-shot-label{
-  text-align: center;
-  margin: 0 0 6px;
-  font-size: 13px;
-  color: var(--muted-2);
-}
-
-/* Изображения тянутся по ширине, высота от ширины */
-.case-shot img{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0;
-}
-
-/* Мобильная версия */
-@media (max-width: 980px){
-  .case-before-after{
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-}
-
-/* ===============================
-   Solution (OVERRIDE)
-   Keep text at 600px, keep media at 1120px
-   =============================== */
-
-.case-solution-block{
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
-/* узкая колонка под текст */
-.case-solution-copy{
-  max-width: 600px;
-  margin: 0 auto;         /* <- важно: центрируем сам блок */
-}
-
-/* на всякий случай ограничиваем и сами заголовки/текст,
-   даже если вдруг где-то забудется wrapper */
-.case-solution-title,
-.case-solution-text{
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-}
-
-/* типографика как ты просила */
-.case-solution-title{
-  font-size: 22px;
-}
-
-.case-solution-text{
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* before/after — на всю ширину контейнера */
-.case-before-after{
-  max-width: 1120px;
-  width: 100%;
-  margin: 24px auto 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  align-items: start;
-}
-
-/* подписи — центр + 6px до картинки */
-.case-shot-label{
-  text-align: center;
-  margin: 0 0 6px;
-}
-
-/* картинки — НЕ обрезаем */
-.case-shot img{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0;
-  object-fit: contain;
-}
-
-@media (max-width: 980px){
-  .case-before-after{
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-}
-
-
-/* Full-width image inside 1120 content container */
-.case-media-full{
-  max-width: 1120px;
-  width: 100%;
-  margin: 24px auto 0;
-}
-
-.case-img-full{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0;
-  object-fit: contain; /* ничего не режем */
-}
-
-/* ===============================
-   Impact — horizontal layout
-   =============================== */
-
-.impact-row{
-  max-width: 600px;
-  margin: 36px auto 0;
-  display: flex;
-  gap: 12px;                /* меньше расстояние */
-}
-
-.impact-card{
-  flex: 1;
-  padding: 28px 16px;       /* больше вертикального веса */
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 14px;
-  text-align: center;
-}
-
-/* без hover */
-.impact-card:hover{
-  background: inherit;
-  border-color: inherit;
-}
-
-.impact-value{
-  font-size: 42px;          /* крупнее */
-  font-weight: 600;
-  color: #7C9CFF;
-  margin-bottom: 10px;
-  letter-spacing: -0.02em;
-}
-
-.impact-label{
-  font-size: 15px;          /* крупнее подпись */
-  color: #ffffff;
-  opacity: 0.8;
-}
-
-/* адаптив */
-@media (max-width: 720px){
-  .impact-row{
-    flex-wrap: wrap;
-  }
-  .impact-card{
-    flex: 1 1 48%;
-  }
-}
-
-/* ===============================
-   Impact (600 copy + 1120 metrics)
-   =============================== */
-
-.case-impact{
-  margin-top: 80px; /* если у тебя общий spacing 80px */
-}
-
-.impact-copy{
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.impact-text{
-  margin-top: 6px;
-}
-
-.impact-metrics{
-  max-width: 1120px;
-  margin: 28px auto 0; /* расстояние от текста до карточек */
-  padding: 0 20px;     /* чтобы на узких экранах не липло к краям */
-}
-
-.impact-row{
-  display: flex;
-  gap: 12px;           /* меньше расстояние между карточками */
-}
-
-.impact-card{
-  flex: 1;
-  padding: 30px 16px;  /* чтобы контент “занимал больше” */
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 14px;
-  text-align: center;
-}
-
-/* убираем hover полностью */
-.impact-card:hover{
-  background: rgba(255,255,255,0.03);
-  border-color: rgba(255,255,255,0.06);
-}
-
-.impact-value{
-  font-size: 44px;
-  font-weight: 600;
-  color: #7C9CFF;
-  margin-bottom: 10px;
-  letter-spacing: -0.02em;
-}
-
-.impact-label{
-  font-size: 16px;
-  color: #ffffff;
-  opacity: 0.85;
-}
-
-/* адаптив */
-@media (max-width: 980px){
-  .impact-row{
-    flex-wrap: wrap;
-  }
-  .impact-card{
-    flex: 1 1 calc(50% - 6px);
-  }
-}
-
-@media (max-width: 560px){
-  .impact-card{
-    flex: 1 1 100%;
-  }
-}
-
-/* === Impact: force left copy (600) + full-width metrics (1120) === */
-
-.case-impact{
-  text-align: left !important; /* убираем унаследованный center */
-}
-
-/* узкий текстовый блок */
-.case-impact .impact-copy{
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left !important;
-}
-
-.case-impact .impact-text{
-  text-align: left !important;
-}
-
-/* широкий блок метрик */
-.case-impact .impact-metrics{
-  /* ширина = весь контейнер контента */
-  max-width: 1120px !important;
-  width: min(1120px, calc(100% - 40px)) !important;
-  margin: 28px auto 0 !important;
-  text-align: left; /* на всякий */
-}
-
-/* ряд карточек */
-.case-impact .impact-row{
-  display: flex;
-  gap: 12px;              /* меньше расстояние */
-  align-items: stretch;
-  justify-content: space-between;
-  width: 100%;
-}
-
-/* карточки растягиваются на всю ширину */
-.case-impact .impact-card{
-  flex: 1 1 0;
-  min-width: 0;
-  padding: 30px 16px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 14px;
-  text-align: center;
-}
-
-/* убираем hover */
-.case-impact .impact-card:hover{
-  transform: none;
-  background: rgba(255,255,255,0.03);
-  border-color: rgba(255,255,255,0.06);
-  box-shadow: none;
-}
-
-.case-impact .impact-value{
-  font-size: 44px;
-  font-weight: 600;
-  color: #7C9CFF;
-  margin-bottom: 10px;
-  letter-spacing: -0.02em;
-}
-
-.case-impact .impact-label{
-  font-size: 16px;
-  color: #ffffff;
-  opacity: 0.85;
-}
-
-/* адаптив */
-@media (max-width: 980px){
-  .case-impact .impact-row{ flex-wrap: wrap; }
-  .case-impact .impact-card{ flex: 1 1 calc(50% - 6px); }
-}
-@media (max-width: 560px){
-  .case-impact .impact-card{ flex: 1 1 100%; }
-}
-
-/* ===============================
-   Impact (600px copy + 1120px metrics)
-   =============================== */
-
-.case-copy-600{
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left; /* фикс "поехало в центр" */
-}
-
-.case-impact .case-overview-label{
-  margin-bottom: 6px;
-}
-
-.case-impact-lead{
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.6;
-  color: rgba(255,255,255,.92);
-}
-
-/* Full-width area under the 600px text */
-.case-impact-metrics{
-  max-width: 1120px;
-  margin: 28px auto 0;
-  padding: 0 24px; /* если у контейнера страницы есть сайд-паддинги */
-}
-
-/* 4 cards in a row */
-.impact-cards{
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px; /* меньше расстояние между карточками */
-}
-
-/* No hover */
-.impact-card{
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 16px;
-  padding: 26px 22px; /* больше "заполнение" */
-  min-height: 140px;  /* чтобы не выглядело пусто */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-
-  transition: none !important;
-}
-.impact-card:hover{
-  transform: none !important;
-  box-shadow: none !important;
-  background: rgba(255,255,255,.04) !important;
-}
-
-/* Big number */
-.impact-num{
-  font-size: 48px;
-  line-height: 1.05;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: #7f9de0;
-  margin-bottom: 10px;
-}
-
-/* White label 16px */
-.impact-label{
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 600;
-  color: #ffffff;
-  opacity: .92;
-}
-
-/* Responsive */
-@media (max-width: 980px){
-  .impact-cards{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (max-width: 520px){
-  .impact-cards{ grid-template-columns: 1fr; }
 }
