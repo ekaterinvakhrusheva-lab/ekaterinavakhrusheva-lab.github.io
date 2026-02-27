@@ -64,6 +64,7 @@
   font-size:14px;
   color:var(--muted);
   transition:.15s ease;
+  white-space:nowrap;
 }
 
 .back-link:hover{
@@ -71,6 +72,19 @@
   color:#fff;
 }
 
+.back-text{
+  display:inline;
+}
+
+@media (max-width: 860px){
+  .back-text{
+    display:none;
+  }
+
+  .back-link{
+    padding:8px 10px;
+  }
+}
 
 /* ===============================
    Hero
@@ -527,7 +541,6 @@
   transform: translateY(-1px);
 }
 
-/* Footer — keep aligned to your global style variables */
 .footer{
   margin-top: 80px;
   text-align: center;
@@ -537,8 +550,8 @@
 
 @media (max-width: 1140px){
   .case-more-links{
-    border-radius: 18px;
-    padding: 12px;
+    border-radius: 999px;
+    padding: 10px;
   }
 }
 
