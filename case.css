@@ -307,12 +307,6 @@
   margin: 0 auto 6px;
 }
 
-/* Each solution block (text narrow) */
-.case-solution-block{
-  max-width: 600px;
-  margin: 0 auto;
-}
-
 /* spacing between meaning blocks */
 .case-solution-block + .case-solution-block{
   margin-top: 80px;
@@ -531,6 +525,55 @@
 /* mobile */
 @media (max-width: 980px){
   .case-solution-block .case-before-after{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+/* ===============================
+   Solution layout: text 600px, images 1120px
+   =============================== */
+
+/* Весь solution-блок = ширина контейнера */
+.case-solution-block{
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* Только текст ограничиваем */
+.case-solution-copy{
+  max-width: 600px;
+}
+
+/* Before / After = вся ширина контейнера */
+.case-before-after{
+  width: 100%;
+  margin: 24px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Подписи */
+.case-shot-label{
+  text-align: center;
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: var(--muted-2);
+}
+
+/* Изображения тянутся по ширине, высота от ширины */
+.case-shot img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
+
+/* Мобильная версия */
+@media (max-width: 980px){
+  .case-before-after{
     grid-template-columns: 1fr;
     gap: 18px;
   }
