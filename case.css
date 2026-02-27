@@ -186,7 +186,7 @@
 .case-impact,
 .case-afterword,
 .case-more{
-  margin-top: 80px;
+  margin-top: 72px;
 }
 
 .case-overview-wrap{
@@ -247,7 +247,7 @@
   left: 0;
   top: 16px;
   bottom: 16px;
-  width: 1px; /* тонкая линия */
+  width: 3px;
   background: rgba(127,157,224,.9);
 }
 
@@ -272,7 +272,6 @@
 }
 .case-dash-list p:last-child{ margin-bottom: 0; }
 
-/* Quotes: no background, bold, #7f9de0 */
 .case-research-quotes{
   margin-top: 8px;
   padding: 0;
@@ -299,7 +298,7 @@
 
 
 /* ===============================
-   Solution (copy 600px + media 1120px)
+   Solution
    =============================== */
 
 /* label block — keep 6px gap to next content */
@@ -309,7 +308,7 @@
 
 /* spacing between solution blocks */
 .case-solution-block + .case-solution-block{
-  margin-top: 80px;
+  margin-top: 72px;
 }
 
 /* each solution block uses full container,
@@ -359,9 +358,10 @@
 
 .case-shot-label{
   text-align: center;
-  margin: 0 0 6px; /* requested: 6px to image */
-  font-size: 13px;
-  color: var(--muted-2);
+  margin: 0 0 6px; 
+  font-size: 14px;
+   weight: 600;
+  color: var(--muted);
 }
 
 /* images scale by width, height follows naturally */
@@ -371,7 +371,7 @@
   display: block;
   border-radius: 0;
   border: none;
-  object-fit: contain; /* safe: no cropping if any height is ever constrained */
+  object-fit: contain;
 }
 
 @media (max-width: 980px){
@@ -402,7 +402,7 @@
    =============================== */
 
 .case-impact{
-  text-align: left; /* important: prevent accidental center inheritance */
+  text-align: left;
 }
 
 .impact-copy{
@@ -433,9 +433,9 @@
 
 .impact-card{
   background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
+  border: none;
   border-radius: 16px;
-  padding: 28px 18px; /* больше заполнение */
+  padding: 28px 18px;
   min-height: 132px;
   display: flex;
   flex-direction: column;
