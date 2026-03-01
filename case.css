@@ -1,12 +1,46 @@
+/* ===============================
+   Case tokens + theming hooks
+   =============================== */
+
+:root{
+  /* Surfaces */
+  --case-surface: #242424;
+  --case-card: rgba(255,255,255,.04);
+  --case-hover: rgba(255,255,255,.07);
+
+  /* Accents */
+  --case-accent: #7f9de0;
+  --case-accent-strong: rgba(127,157,224,.9);
+  --case-accent-soft: rgba(127,157,224,.16);
+  --case-active: rgba(150,100,255,.30);
+
+  /* Layout */
+  --case-container: 1120px;
+  --case-copy: 600px;
+  --case-hero: 900px;
+
+  /* Radii */
+  --case-pill-radius: 999px;
+  --case-card-radius: 16px;
+
+  /* Spacing */
+  --case-page-padding-top: 28px;
+  --case-page-padding-x: 20px;
+  --case-page-padding-bottom: 32px;
+  --case-section-gap: 72px;
+}
+
+/* Optional hook (no visual change unless you override) */
+.case{}
 
 /* ===============================
    Layout
    =============================== */
 
 .case-wrap{
-  max-width: 1120px;
+  max-width: var(--case-container);
   margin: 0 auto;
-  padding: 28px 20px 32px;
+  padding: var(--case-page-padding-top) var(--case-page-padding-x) var(--case-page-padding-bottom);
 }
 
 /* Sticky nav*/
@@ -34,26 +68,26 @@
   display:flex;
   gap: 6px;
   padding: 8px;
-  border-radius: 999px;
-  background: #242424;
+  border-radius: var(--case-pill-radius);
+  background: var(--case-surface);
   box-shadow: var(--shadow-soft);
 }
 
 .nav-pill a{
   font-size: 14px;
   padding: 6px 10px;
-  border-radius: 999px;
+  border-radius: var(--case-pill-radius);
   color: var(--muted);
   transition: .15s ease;
 }
 
 .nav-pill a:hover{
-  background: rgba(255,255,255,.07);
+  background: var(--case-hover);
   color: #fff;
 }
 
 .nav-pill a.active{
-  background: rgba(150,100,255,.30);
+  background: var(--case-active);
   color:#fff;
 }
 
@@ -66,18 +100,18 @@
   align-items:center;
   gap:6px;
   padding:8px 14px;
-  border-radius:999px;
-  background:#242424;
+  border-radius: var(--case-pill-radius);
+  background: var(--case-surface);
   box-shadow: var(--shadow-soft);
   font-size:14px;
   color:var(--muted);
   transition:.15s ease;
   white-space:nowrap;
-   z-index: 1001;
+  z-index: 1001;
 }
 
 .back-link:hover{
-  background:rgba(255,255,255,.07);
+  background: var(--case-hover);
   color:#fff;
 }
 
@@ -110,7 +144,7 @@
    =============================== */
 
 .case-hero{
-  max-width: 900px;
+  max-width: var(--case-hero);
   margin: 0 auto;
   padding: 64px 20px 0;
   text-align:center;
@@ -120,7 +154,7 @@
   width:80px;
   height:80px;
   border-radius: var(--radius-xl);
-  background: rgba(127,157,224,.16);
+  background: var(--case-accent-soft);
   display:flex;
   align-items:center;
   justify-content:center;
@@ -147,13 +181,12 @@
   line-height:1.25;
 }
 
-
 /* ===============================
    Meta line
    =============================== */
 
 .case-meta-line{
-  max-width:1120px;
+  max-width: var(--case-container);
   margin:32px auto 0;
   padding-top:32px;
   border-top:1px solid var(--border);
@@ -176,13 +209,12 @@
   line-height:1.25;
 }
 
-
 /* ===============================
    Hero media
    =============================== */
 
 .case-hero-media{
-  max-width: 1120px;
+  max-width: var(--case-container);
   margin: 60px auto 0;
   overflow: hidden;
   border: none;
@@ -207,7 +239,6 @@
   border-radius: 0 !important;
 }
 
-
 /* ===============================
    Section spacing + shared copy block
    =============================== */
@@ -219,11 +250,11 @@
 .case-impact,
 .case-afterword,
 .case-more{
-  margin-top: 72px;
+  margin-top: var(--case-section-gap);
 }
 
 .case-overview-wrap{
-  max-width: 600px;
+  max-width: var(--case-copy);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -248,13 +279,12 @@
 }
 .case-overview-text p:last-child{ margin-bottom: 0; }
 
-
 /* ===============================
    Research (4 blocks with thin left line)
    =============================== */
 
 .case-research-grid{
-  max-width: 1120px;
+  max-width: var(--case-container);
   margin: 32px auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -281,7 +311,7 @@
   top: 16px;
   bottom: 16px;
   width: 3px;
-  background: rgba(127,157,224,.9);
+  background: var(--case-accent-strong);
 }
 
 .case-research-top{
@@ -318,7 +348,7 @@
   font-size: 16px;
   line-height: 1.5;
   font-weight: 600;
-  color: #7f9de0;
+  color: var(--case-accent);
 }
 .case-research-quotes .case-quote-text:last-child{ margin-bottom: 0; }
 
@@ -328,7 +358,6 @@
     gap: 24px;
   }
 }
-
 
 /* ===============================
    Solution
@@ -341,19 +370,19 @@
 
 /* spacing between solution blocks */
 .case-solution-block + .case-solution-block{
-  margin-top: 72px;
+  margin-top: var(--case-section-gap);
 }
 
 /* each solution block uses full container,
    but the copy inside is 600px */
 .case-solution-block{
-  max-width: 1120px;
+  max-width: var(--case-container);
   margin: 0 auto;
 }
 
 /* copy wrapper (keeps text at 600px) */
 .case-solution-copy{
-  max-width: 600px;
+  max-width: var(--case-copy);
   margin: 0 auto;
 }
 
@@ -391,9 +420,9 @@
 
 .case-shot-label{
   text-align: center;
-  margin: 0 0 6px; 
+  margin: 0 0 6px;
   font-size: 14px;
-   weight: 600;
+  weight: 600;
   color: var(--muted);
 }
 
@@ -429,7 +458,6 @@
   object-fit: contain;
 }
 
-
 /* ===============================
    Impact (copy 600px + cards 1120px)
    =============================== */
@@ -439,7 +467,7 @@
 }
 
 .impact-copy{
-  max-width: 600px;
+  max-width: var(--case-copy);
   margin: 0 auto;
   text-align: left;
 }
@@ -454,7 +482,7 @@
 
 /* cards area full width of container */
 .impact-metrics{
-  max-width: 1120px;
+  max-width: var(--case-container);
   margin: 28px auto 0;
 }
 
@@ -465,9 +493,9 @@
 }
 
 .impact-card{
-  background: rgba(255,255,255,.04);
+  background: var(--case-card);
   border: none;
-  border-radius: 16px;
+  border-radius: var(--case-card-radius);
   padding: 28px 18px;
   min-height: 132px;
   display: flex;
@@ -481,7 +509,7 @@
 .impact-card:hover{
   transform: none !important;
   box-shadow: none !important;
-  background: rgba(255,255,255,.04) !important;
+  background: var(--case-card) !important;
   border-color: rgba(255,255,255,.08) !important;
 }
 
@@ -490,7 +518,7 @@
   line-height: 1.05;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #7f9de0;
+  color: var(--case-accent);
   margin-bottom: 10px;
 }
 
@@ -510,13 +538,12 @@
   .impact-row{ grid-template-columns: 1fr; }
 }
 
-
 /* ===============================
    Afterword + More projects
    =============================== */
 
 .case-afterword .case-overview-wrap{
-  max-width: 600px;
+  max-width: var(--case-copy);
 }
 
 .case-more{
@@ -536,8 +563,8 @@
   justify-content: center;
 
   padding: 10px;
-  border-radius: 999px;
-  background: #242424;
+  border-radius: var(--case-pill-radius);
+  background: var(--case-surface);
   box-shadow: var(--shadow-soft);
 }
 
@@ -545,7 +572,7 @@
   display: inline-flex;
   align-items: center;
   padding: 8px 12px;
-  border-radius: 999px;
+  border-radius: var(--case-pill-radius);
 
   font-size: 14px;
   color: rgba(242,242,242,.70);
@@ -553,7 +580,7 @@
 }
 
 .case-pill:hover{
-  background: rgba(255,255,255,.07);
+  background: var(--case-hover);
   color: #fff;
   transform: translateY(-1px);
 }
@@ -582,7 +609,7 @@
 /* FIX: Solution #3 copy width (Consistency & Scalability) */
 .case-solution-block .case-solution-title,
 .case-solution-block .case-solution-text{
-  max-width: 600px;
+  max-width: var(--case-copy);
   margin-left: auto;
   margin-right: auto;
   text-align: left;
