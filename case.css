@@ -28,10 +28,33 @@
   --case-page-padding-x: 20px;
   --case-page-padding-bottom: 32px;
   --case-section-gap: 72px;
+
+   --c-alfa: #FE4851;
 }
 
 /* Optional hook (no visual change unless you override) */
 .case{}
+
+/* ===============================
+   Per-case overrides
+   =============================== */
+
+.case--alfa{
+  --case-accent: var(--c-alfa);
+  --case-accent-strong: rgba(254,72,81,.9);
+  --case-accent-soft: rgba(254,72,81,.16);
+}
+
+/* Alfa: keep media blocks aligned to hero width (900px) */
+.case--alfa .case-hero-media,
+.case--alfa .case-research-grid,
+.case--alfa .case-solution-block,
+.case--alfa .case-media-full,
+.case--alfa .impact-metrics{
+  max-width: var(--case-hero);
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* ===============================
    Layout
