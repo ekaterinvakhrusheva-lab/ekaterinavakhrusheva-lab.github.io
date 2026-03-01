@@ -214,7 +214,7 @@
    =============================== */
 
 .case-hero-media{
-  max-width: var(--case-container);
+  max-width: 1120px;
   margin: 60px auto 0;
   overflow: hidden;
   border: none;
