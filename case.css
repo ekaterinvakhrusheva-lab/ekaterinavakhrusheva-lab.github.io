@@ -70,7 +70,7 @@
   padding: 8px;
   border-radius: var(--case-pill-radius);
   background: var(--case-surface);
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadow);
 }
 
 .nav-pill a{
