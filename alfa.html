@@ -4,11 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alfa Digital — Case Study</title>
+
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="case.css" />
 </head>
 <body>
-  <div class="container">
-    <nav class="nav">
+
+  <div class="case-wrap">
+    <!-- Top navigation -->
+    <nav class="nav case-nav">
+      <a class="back-link" href="index.html#work">
+        <span class="back-arrow">←</span>
+        <span class="back-text">Back</span>
+      </a>
+
       <div class="nav-pill">
         <a href="index.html#about">About</a>
         <a class="active" href="index.html#work">Work</a>
@@ -16,14 +25,298 @@
       </div>
     </nav>
 
-    <a href="index.html#work" style="color:#b7b7b7; border-bottom:1px solid rgba(255,255,255,.25);">
-      ← Back to Work
-    </a>
+    <!-- Hero -->
+    <header class="case-hero">
+      <div class="case-icon">
+        <!-- keep old image for now -->
+        <img src="assets/icon-express.png" alt="" aria-hidden="true" />
+      </div>
 
-    <h1 class="h1" style="text-align:left; margin-top:18px;">eXpress</h1>
-    <p class="lead" style="text-align:left;">
-      Case study page (draft). Next step: add TL;DR, problem, process, solution, impact.
-    </p>
+      <h1 class="case-title">Alfa Digital</h1>
+
+      <p class="case-subtitle">
+        Redesign of an internal HR platform for Alfa Bank — built to support hiring, community engagement,
+        and a stronger employer brand for a tech audience.
+      </p>
+
+      <div class="case-meta-line">
+        <div class="meta-item">
+          <div class="meta-k">Scope</div>
+          <div class="meta-v">UX audit, research, IA, UX/UI, design system, KPI foundations</div>
+        </div>
+
+        <div class="meta-item">
+          <div class="meta-k">My Role</div>
+          <div class="meta-v">Lead Product Designer</div>
+        </div>
+
+        <div class="meta-item">
+          <div class="meta-k">Platform</div>
+          <div class="meta-v">Web</div>
+        </div>
+
+        <div class="meta-item">
+          <div class="meta-k">Timeline</div>
+          <div class="meta-v">Nov–Dec 2023 (MVP)</div>
+        </div>
+      </div>
+
+      <div class="case-hero-media no-frame">
+        <!-- keep old image for now -->
+        <img src="assets/express-hero.png" alt="Case hero preview" />
+      </div>
+    </header>
+
+    <!-- OVERVIEW -->
+    <section class="section case-overview">
+      <div class="case-overview-wrap">
+        <div class="case-overview-label">Overview</div>
+
+        <div class="case-overview-text">
+          <p>
+            Alfa Digital is an internal HR platform for one of the largest private banks in Eastern Europe.
+            The previous version didn’t reflect the company’s IT expertise, had weak structure, and didn’t
+            support measurable improvements.
+          </p>
+
+          <p>
+            I led an MVP redesign focused on four core journeys: discovering the company, exploring roles,
+            registering for events, and learning about team culture — with scalable navigation, consistent UI,
+            and clear foundations for analytics.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHALLENGE -->
+    <section class="section case-challenge">
+      <div class="case-overview-wrap">
+        <div class="case-overview-label">Challenge</div>
+
+        <div class="case-overview-text">
+          <p>
+            The platform was hard to navigate and visually inconsistent. Job and event pages lacked
+            standardised patterns, filters, and clear calls-to-action.
+          </p>
+          <p>
+            There was also no space to tell the culture story — and no analytics in place to understand user
+            behaviour or improve conversion over time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="section case-research">
+      <div class="case-overview-wrap">
+        <div class="case-overview-label">Research</div>
+
+        <div class="case-overview-text">
+          <p>
+            I combined a UX + accessibility audit with stakeholder and user research to align business goals,
+            validate pain points, and translate insights into an MVP-ready structure and UI system.
+          </p>
+        </div>
+      </div>
+
+      <div class="case-research-grid">
+        <!-- 1 -->
+        <article class="case-research-card">
+          <div class="case-research-top">
+            <h3 class="case-research-title">UX & accessibility audit</h3>
+          </div>
+          <div class="case-dash-list">
+            <p>— Evaluated with Nielsen’s heuristics + WCAG 2.1</p>
+            <p>— Flagged structure gaps, weak hierarchy, and unclear CTAs</p>
+            <p>— Mapped friction across job discovery and event registration</p>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="case-research-card">
+          <div class="case-research-top">
+            <h3 class="case-research-title">Stakeholders (HR, DevRel, Brand)</h3>
+          </div>
+          <div class="case-dash-list">
+            <p>— 5 interviews to align on goals and constraints</p>
+            <p>— Clarified target audience and positioning in the tech market</p>
+            <p>— Defined what “success” should look like for the MVP</p>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="case-research-card">
+          <div class="case-research-top">
+            <h3 class="case-research-title">Competitor review (10+ sites)</h3>
+          </div>
+          <div class="case-dash-list">
+            <p>— Benchmarked HR / tech employer sites</p>
+            <p>— Compared navigation patterns and content strategies</p>
+            <p>— Identified gaps in discoverability and trust-building</p>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="case-research-card">
+          <div class="case-research-top">
+            <h3 class="case-research-title">Users (IT professionals)</h3>
+          </div>
+          <div class="case-dash-list">
+            <p>— Survey: 28 responses</p>
+            <p>— Interviews: 5 sessions</p>
+            <p>— Output: 4 core personas + 12 user stories</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="section case-solution-editorial">
+      <div class="case-overview-wrap">
+        <div class="case-overview-label">Solution</div>
+      </div>
+
+      <!-- 1 -->
+      <div class="case-solution-block">
+        <div class="case-solution-copy">
+          <h2 class="case-solution-title">Structure & navigation built around 4 journeys</h2>
+
+          <p class="case-solution-text">
+            I re-architected the platform around four journeys — Discover, Apply, Join Events, and Explore Culture —
+            and translated them into a scalable IA with four core sections: Homepage, Team, Careers, and Events.
+            With PM and stakeholders, I aligned what each section needs to achieve, then iterated the structure with devs
+            to keep it shippable within the MVP timeline.
+          </p>
+        </div>
+
+        <div class="case-before-after">
+          <div class="case-shot">
+            <div class="case-shot-label">Before</div>
+            <!-- keep old image for now -->
+            <img src="assets/case-express-before.png" alt="Before redesign">
+          </div>
+
+          <div class="case-shot">
+            <div class="case-shot-label">After</div>
+            <!-- keep old image for now -->
+            <img src="assets/case-express-after.png" alt="After redesign">
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="case-solution-block">
+        <div class="case-solution-copy">
+          <h2 class="case-solution-title">Clearer content, stronger trust signals</h2>
+
+          <p class="case-solution-text">
+            Together with HR and DevRel, I reworked content for clarity and tone — adding real employee voices,
+            improving job description readability, and making culture more visible across the experience.
+            The goal was simple: less “corporate noise”, more concrete reasons to join.
+          </p>
+        </div>
+
+        <div class="case-before-after">
+          <div class="case-shot">
+            <div class="case-shot-label">Before</div>
+            <!-- keep old image for now -->
+            <img src="assets/case-express-onboarding-before.png" alt="Before content / flow">
+          </div>
+
+          <div class="case-shot">
+            <div class="case-shot-label">After</div>
+            <!-- keep old image for now -->
+            <img src="assets/case-express-onboarding-after.png" alt="After content / flow">
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="case-solution-block">
+        <h2 class="case-solution-title">Modular design system + analytics foundations</h2>
+
+        <p class="case-solution-text">
+          I introduced a modular design system (a “neat brutalism” style) to standardise layouts, hierarchy, and components
+          across jobs, events, and content pages — and to speed up future delivery.
+          Since analytics didn’t exist, I also defined KPI foundations tied to the redesigned funnels:
+          job views → applications, event interest → sign-ups, plus time on page, scroll depth, and bounce rate.
+        </p>
+
+        <div class="case-media-full">
+          <!-- keep old image for now -->
+          <img class="case-img-full" src="assets/case-express-design-system.png" alt="Design system and scalability">
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="section case-impact">
+      <div class="impact-copy">
+        <div class="case-overview-label">Impact</div>
+        <p class="impact-text">
+          Full analytics would be available post-launch, but early A/B checks and usability feedback showed a clear lift:
+          better navigation, clearer CTAs, and a more credible, human-facing employer story.
+        </p>
+      </div>
+
+      <div class="impact-metrics">
+        <div class="impact-row">
+          <div class="impact-card">
+            <div class="impact-value">+33%</div>
+            <div class="impact-label">Expected conversion</div>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-value">+20%</div>
+            <div class="impact-label">Time on site (testing)</div>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-value">4</div>
+            <div class="impact-label">Core journeys</div>
+          </div>
+
+          <div class="impact-card">
+            <div class="impact-value">12</div>
+            <div class="impact-label">User stories shipped to MVP</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AFTERWORD -->
+    <section class="section case-afterword">
+      <div class="case-overview-wrap">
+        <div class="case-overview-label">Afterword</div>
+
+        <div class="case-overview-text">
+          <p>
+            The key constraint here was time. Leading an MVP under a tight deadline forced ruthless prioritisation —
+            focusing on journeys, clarity, and a reusable system rather than “polishing everything”.
+          </p>
+          <p>
+            Next steps (with full analytics live) would be iterative optimisation of funnel drop-offs,
+            plus deeper content testing for roles, culture pages, and event discovery.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MORE -->
+    <section class="section case-more">
+      <h2 class="case-more-title">More projects</h2>
+
+      <div class="case-more-links">
+        <a class="case-pill" href="express.html">eXpress →</a>
+        <a class="case-pill" href="raif.html">Raiffeisen Invest →</a>
+        <a class="case-pill" href="index.html">Back to Home →</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Designed and coded by Ekaterina Vakhrusheva · 2026
+    </footer>
   </div>
+
 </body>
 </html>
