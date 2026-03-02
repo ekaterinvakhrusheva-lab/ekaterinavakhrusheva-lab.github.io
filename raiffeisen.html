@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="case.css" />
 
-  <!-- Per-case theming only (global CSS stays unchanged) -->
   <style>
     .case--raiffeisen{
       --case-accent: #f5c400;
@@ -16,7 +15,6 @@
       --case-accent-soft: rgba(245,196,0,.16);
     }
 
-    /* Keep media aligned nicely (optional, consistent with Alfa overrides) */
     .case--raiffeisen .case-hero-media,
     .case--raiffeisen .case-research-grid,
     .case--raiffeisen .case-solution-block,
@@ -27,7 +25,6 @@
       margin-right: auto;
     }
 
-    /* Auto-fit impact cards if you later change the number of cards */
     .case--raiffeisen .impact-row{
       grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
     }
@@ -35,351 +32,223 @@
 </head>
 
 <body class="case case--raiffeisen">
+<div class="case-wrap">
 
-  <div class="case-wrap">
+<!-- NAV -->
+<nav class="nav case-nav">
+  <a class="back-link" href="index.html#work">
+    <span class="back-arrow">←</span>
+    <span class="back-text">Back</span>
+  </a>
 
-    <!-- Top navigation -->
-    <nav class="nav case-nav">
-      <a class="back-link" href="index.html#work">
-        <span class="back-arrow">←</span>
-        <span class="back-text">Back</span>
-      </a>
+  <div class="nav-pill">
+    <a href="index.html#about">About</a>
+    <a class="active" href="index.html#work">Work</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
 
-      <div class="nav-pill">
-        <a href="index.html#about">About</a>
-        <a class="active" href="index.html#work">Work</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
-    </nav>
-
-    <!-- Hero -->
-    <header class="case-hero">
-      <div class="case-icon">
-        <!-- Keep existing icon asset for now; swap later -->
-        <img src="assets/icon-express.png" alt="" aria-hidden="true" />
-      </div>
-
-      <h1 class="case-title">Raiffeisen Invest</h1>
-
-      <p class="case-subtitle">
-        A research-driven UX audit of the Raiffeisen Invest mobile app — focused on beginner trust,
-        early-journey clarity, and habit formation for long-term retention.
-      </p>
-
-      <div class="case-meta-line">
-        <div class="meta-item">
-          <div class="meta-k">Scope</div>
-          <div class="meta-v">UX audit, benchmarking, insights synthesis, concept proposals, prototype testing</div>
-        </div>
-
-        <div class="meta-item">
-          <div class="meta-k">My Role</div>
-          <div class="meta-v">Lead Product Designer</div>
-        </div>
-
-        <div class="meta-item">
-          <div class="meta-k">Platform</div>
-          <div class="meta-v">Mobile</div>
-        </div>
-
-        <div class="meta-item">
-          <div class="meta-k">Timeline</div>
-          <div class="meta-v">Jul–Aug 2023</div>
-        </div>
-      </div>
-
-      <!-- Keep existing hero image for now -->
-      <div class="case-hero-media no-frame">
-        <img src="assets/express-hero.png" alt="Raiffeisen Invest — preview (placeholder)" />
-      </div>
-    </header>
-
-    <!-- OVERVIEW -->
-    <section class="section case-overview">
-      <div class="case-overview-wrap">
-        <div class="case-overview-label">Overview</div>
-
-        <div class="case-overview-text">
-          <p>
-            Beginner investors often drop off after the first “bad” experience — uncertainty, risky choices,
-            and unclear outcomes quickly erode trust. This audit looked at where the Raiffeisen Invest app
-            breaks confidence early and why users don’t build a repeat investing habit.
-          </p>
-          <p>
-            The outcome was a set of product-aligned UX opportunities: onboarding and contextual guidance,
-            smarter entry points when buying, lightweight education inside critical steps, and habit-building tools
-            (recurring investing, reminders, and portfolio control signals).
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHALLENGE -->
-    <section class="section case-challenge">
-      <div class="case-overview-wrap">
-        <div class="case-overview-label">Challenge</div>
-
-        <div class="case-overview-text">
-          <p>
-            The current experience is highly transactional: users can buy assets, but the interface doesn’t actively
-            guide beginners through decisions, risk, or learning.
-          </p>
-          <p>
-            Without onboarding, contextual hints, or portfolio “health” signals, new investors can take on too much
-            risk too quickly — and then simply stop returning after an early negative result.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- GOALS (custom block for this case) -->
-    <section class="section case-challenge">
-      <div class="case-overview-wrap">
-        <div class="case-overview-label">Goals</div>
-
-        <div class="case-overview-text">
-          <p>— Conduct a research-based UX audit focused on novice investors.</p>
-          <p>— Identify friction in early journeys: onboarding, first purchase, and “what next”.</p>
-          <p>— Highlight gaps in trust, learning, and repeat engagement.</p>
-          <p>— Provide actionable recommendations aligned with retention and LTV.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESEARCH -->
-    <section class="section case-research">
-      <div class="case-overview-wrap">
-        <div class="case-overview-label">Research & Audit</div>
-
-        <div class="case-overview-text">
-          <p>
-            I started with competitive benchmarking and public feedback analysis, then validated patterns
-            through quick qualitative checks. The goal wasn’t to “collect everything”, but to isolate
-            the trust-breaking moments and turn them into clear product opportunities.
-          </p>
-        </div>
-      </div>
-
-      <div class="case-research-grid">
-        <!-- 1 -->
-        <article class="case-research-card">
-          <div class="case-research-top">
-            <h3 class="case-research-title">Competitive benchmarking</h3>
-          </div>
-          <div class="case-dash-list">
-            <p>— Benchmarked flows and guidance patterns across major investing apps</p>
-            <p>— Looked for how competitors reduce decision fatigue for beginners</p>
-            <p>— Noted where learning and risk framing appear “in the moment”</p>
-          </div>
-        </article>
-
-        <!-- 2 -->
-        <article class="case-research-card">
-          <div class="case-research-top">
-            <h3 class="case-research-title">Public user feedback analysis</h3>
-          </div>
-          <div class="case-dash-list">
-            <p>— Reviewed App Store / Google Play feedback and fintech forums</p>
-            <p>— Clustered recurring complaints into journey-level friction themes</p>
-            <p>— Prioritised issues that impact trust and early retention</p>
-          </div>
-        </article>
-
-        <!-- 3 -->
-        <article class="case-research-card">
-          <div class="case-research-top">
-            <h3 class="case-research-title">Qualitative validation</h3>
-          </div>
-          <div class="case-dash-list">
-            <p>— Short interviews to understand beginner mental models</p>
-            <p>— Focus on “first buy” anxiety and decision-making heuristics</p>
-            <p>— Checked which explanations actually reduce perceived risk</p>
-          </div>
-        </article>
-
-        <!-- 4 -->
-        <article class="case-research-card">
-          <div class="case-research-top">
-            <h3 class="case-research-title">Synthesis → opportunity map</h3>
-          </div>
-          <div class="case-dash-list">
-            <p>— Mapped gaps: onboarding, guidance, education, habit support</p>
-            <p>— Converted issues into product opportunities and UX concepts</p>
-            <p>— Anchored recommendations in retention and long-term engagement</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- SOLUTION / OPPORTUNITIES -->
-    <section class="section case-solution-editorial">
-      <div class="case-overview-wrap">
-        <div class="case-overview-label">Opportunities & Concepts</div>
-      </div>
-
-      <!-- 1 -->
-      <div class="case-solution-block">
-        <div class="case-solution-copy">
-          <h2 class="case-solution-title">Onboarding that defines intent (not just registration)</h2>
-
-          <p class="case-solution-text">
-            The biggest early gap was the lack of guidance. I proposed a lightweight onboarding quiz that captures
-            goals, time horizon, and risk tolerance — then translates it into a clear “starting strategy”.
-            This reframes the first session from “pick random assets” to “follow a plan”, which is critical for trust.
-          </p>
-        </div>
-
-        <!-- Placeholder images (keep Express assets for now) -->
-        <div class="case-before-after">
-          <div class="case-shot">
-            <div class="case-shot-label">Before</div>
-            <img src="assets/case-express-before.png" alt="Before (placeholder)">
-          </div>
-          <div class="case-shot">
-            <div class="case-shot-label">After</div>
-            <img src="assets/case-express-after.png" alt="After (placeholder)">
-          </div>
-        </div>
-      </div>
-
-      <!-- 2 -->
-      <div class="case-solution-block">
-        <div class="case-solution-copy">
-          <h2 class="case-solution-title">Smarter “buy” entry points to reduce decision fatigue</h2>
-
-          <p class="case-solution-text">
-            Beginners were overwhelmed by options with no safe defaults. The concept direction here is curated
-            suggestions based on the onboarding profile: ready-made portfolios, analyst picks, and beginner-friendly
-            bundles — with clear explanations of “why this fits you”.
-          </p>
-        </div>
-
-        <div class="case-before-after">
-          <div class="case-shot">
-            <div class="case-shot-label">Before</div>
-            <img src="assets/case-express-onboarding-before.png" alt="Before (placeholder)">
-          </div>
-          <div class="case-shot">
-            <div class="case-shot-label">After</div>
-            <img src="assets/case-express-onboarding-after.png" alt="After (placeholder)">
-          </div>
-        </div>
-      </div>
-
-      <!-- 3 -->
-      <div class="case-solution-block">
-        <div class="case-solution-copy">
-          <h2 class="case-solution-title">Contextual risk framing inside critical steps</h2>
-
-          <p class="case-solution-text">
-            High-risk instruments were poorly explained, making negative early experiences more likely.
-            I proposed “in-context” hints and friendly explanations during key actions (buy / sell / instrument selection)
-            — so risk is understood at the moment it matters, without forcing users into separate education sections.
-          </p>
-        </div>
-
-        <div class="case-before-after">
-          <div class="case-shot">
-            <div class="case-shot-label">Before</div>
-            <img src="assets/case-express-before.png" alt="Before (placeholder)">
-          </div>
-          <div class="case-shot">
-            <div class="case-shot-label">After</div>
-            <img src="assets/case-express-after.png" alt="After (placeholder)">
-          </div>
-        </div>
-      </div>
-
-      <!-- 4 -->
-      <div class="case-solution-block">
-        <div class="case-solution-copy">
-          <h2 class="case-solution-title">Habit-building mechanics: recurring investing, nudges, control signals</h2>
-
-          <p class="case-solution-text">
-            The flow didn’t encourage long-term engagement. The proposal focused on habit loops:
-            auto top-ups, recurring investments, timely reminders, plus smart alerts for price changes and portfolio
-            rebalancing opportunities — helping users feel in control rather than “hoping for luck”.
-          </p>
-        </div>
-
-        <div class="case-media-full">
-          <!-- Placeholder full-width image (keep Express asset for now) -->
-          <img class="case-img-full" src="assets/case-express-design-system.png" alt="Concepts / patterns (placeholder)">
-        </div>
-      </div>
-
-    </section>
-
-    <!-- IMPACT -->
-    <section class="section case-impact">
-      <div class="impact-copy">
-        <div class="case-overview-label">Business Value & Results</div>
-        <p class="impact-text">
-          The concepts were validated through prototype testing with beginners. The biggest shift was making
-          investment steps more understandable and “safer-feeling” — which directly supports retention, churn reduction,
-          and LTV growth.
-        </p>
-      </div>
-
-      <div class="impact-metrics">
-        <div class="impact-row">
-          <div class="impact-card">
-            <div class="impact-value">+70%</div>
-            <div class="impact-label">Clarity in investment steps</div>
-          </div>
-
-          <div class="impact-card">
-            <div class="impact-value">2×</div>
-            <div class="impact-label">Confidence in recurring investing</div>
-          </div>
-
-          <div class="impact-card">
-            <div class="impact-value">+60%</div>
-            <div class="impact-label">Retention after one session</div>
-          </div>
-
-          <div class="impact-card">
-            <div class="impact-value">16</div>
-            <div class="impact-label">Users in prototype tests</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- AFTERWORD -->
-    <section class="section case-afterword">
-      <div class="case-overview-wrap">
-        <div class="case-overview-label">Learnings</div>
-
-        <div class="case-overview-text">
-          <p>
-            A strong UX audit goes beyond surface-level gaps — it explains why users disengage, and what needs to change
-            to build trust and repeat behaviour.
-          </p>
-          <p>
-            For beginner investing, clarity is a product feature. The more the interface supports decision-making
-            (with safe defaults, contextual explanations, and habit cues), the more sustainable retention becomes.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- MORE -->
-    <section class="section case-more">
-      <h2 class="case-more-title">More projects</h2>
-
-      <div class="case-more-links">
-        <a class="case-pill" href="express.html">eXpress →</a>
-        <a class="case-pill" href="alfa.html">Alfa Digital →</a>
-        <a class="case-pill" href="index.html">Back to Home →</a>
-      </div>
-    </section>
-
-    <footer class="footer">
-      Designed and coded by Ekaterina Vakhrusheva · 2026
-    </footer>
-
+<!-- HERO -->
+<header class="case-hero">
+  <div class="case-icon">
+    <img src="assets/icon-express.png" alt="" />
   </div>
 
+  <h1 class="case-title">Raiffeisen Invest</h1>
+
+  <p class="case-subtitle">
+    A research-driven UX audit of the Raiffeisen Invest mobile app —
+    focused on beginner trust, early clarity, and habit formation.
+  </p>
+
+  <div class="case-meta-line">
+    <div class="meta-item">
+      <div class="meta-k">Scope</div>
+      <div class="meta-v">UX audit, benchmarking, synthesis, concept proposals</div>
+    </div>
+
+    <div class="meta-item">
+      <div class="meta-k">My Role</div>
+      <div class="meta-v">Lead Product Designer</div>
+    </div>
+
+    <div class="meta-item">
+      <div class="meta-k">Platform</div>
+      <div class="meta-v">Mobile</div>
+    </div>
+
+    <div class="meta-item">
+      <div class="meta-k">Timeline</div>
+      <div class="meta-v">Jul–Aug 2023</div>
+    </div>
+  </div>
+
+  <div class="case-hero-media no-frame">
+    <img src="assets/express-hero.png" alt="Raiffeisen Invest preview (placeholder)" />
+  </div>
+</header>
+
+<!-- OVERVIEW -->
+<section class="section case-overview">
+  <div class="case-overview-wrap">
+    <div class="case-overview-label">Overview</div>
+    <div class="case-overview-text">
+      <p>
+        Beginner investors often disengage after a negative first experience.
+        The audit focused on identifying where the current UX weakens trust,
+        increases cognitive load, and fails to support informed decisions.
+      </p>
+      <p>
+        The outcome was a structured opportunity map across onboarding,
+        purchase flow, contextual education, and long-term engagement mechanics.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="section case-research">
+  <div class="case-overview-wrap">
+    <div class="case-overview-label">Research & Audit</div>
+    <div class="case-overview-text">
+      <p>
+        I combined competitive benchmarking, public feedback analysis,
+        and qualitative validation to identify trust-breaking moments
+        in the early investment journey.
+      </p>
+    </div>
+  </div>
+
+  <div class="case-research-grid">
+    <article class="case-research-card">
+      <h3 class="case-research-title">Competitive benchmarking</h3>
+      <div class="case-dash-list">
+        <p>— Compared onboarding and first-purchase flows</p>
+        <p>— Analysed risk framing patterns</p>
+        <p>— Identified guidance mechanisms in leading apps</p>
+      </div>
+    </article>
+
+    <article class="case-research-card">
+      <h3 class="case-research-title">Public feedback analysis</h3>
+      <div class="case-dash-list">
+        <p>— Reviewed App Store & Play Market feedback</p>
+        <p>— Clustered friction themes</p>
+        <p>— Prioritised trust-impacting issues</p>
+      </div>
+    </article>
+
+    <article class="case-research-card">
+      <h3 class="case-research-title">Qualitative validation</h3>
+      <div class="case-dash-list">
+        <p>— Short interviews with beginner investors</p>
+        <p>— Analysed mental models & expectations</p>
+        <p>— Validated key pain points</p>
+      </div>
+    </article>
+
+    <article class="case-research-card">
+      <h3 class="case-research-title">Synthesis</h3>
+      <div class="case-dash-list">
+        <p>— Mapped friction to journey stages</p>
+        <p>— Identified behavioural drop-off risks</p>
+        <p>— Converted insights into opportunity areas</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- NEW SECTION: KEY FINDINGS -->
+<section class="section case-challenge">
+  <div class="case-overview-wrap">
+    <div class="case-overview-label">Key Findings</div>
+
+    <div class="case-overview-text">
+      <p>
+        1. No structured onboarding → beginners enter the app without
+        a clear investment strategy or risk framing.
+      </p>
+
+      <p>
+        2. Purchase flow lacks contextual explanations → users make decisions
+        without understanding volatility, diversification, or long-term impact.
+      </p>
+
+      <p>
+        3. No habit-building mechanics → the product supports transactions,
+        but not repeat behaviour or long-term discipline.
+      </p>
+
+      <p>
+        4. Portfolio visibility does not translate into actionable guidance →
+        users see numbers, but don’t know what to do next.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- OPPORTUNITIES -->
+<section class="section case-solution-editorial">
+  <div class="case-overview-wrap">
+    <div class="case-overview-label">Opportunities & Concepts</div>
+  </div>
+
+  <div class="case-solution-block">
+    <div class="case-solution-copy">
+      <h2 class="case-solution-title">Intent-based onboarding</h2>
+      <p class="case-solution-text">
+        A short onboarding flow defining risk tolerance and goals,
+        transforming the first session into a guided starting strategy.
+      </p>
+    </div>
+
+    <div class="case-before-after">
+      <div class="case-shot">
+        <div class="case-shot-label">Before</div>
+        <img src="assets/case-express-before.png" />
+      </div>
+      <div class="case-shot">
+        <div class="case-shot-label">After</div>
+        <img src="assets/case-express-after.png" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Остальные solution-блоки можно оставить как в предыдущей версии -->
+</section>
+
+<!-- IMPACT -->
+<section class="section case-impact">
+  <div class="impact-copy">
+    <div class="case-overview-label">Business Value</div>
+    <p class="impact-text">
+      Prototype validation showed stronger clarity, reduced anxiety in first-time actions,
+      and higher intent to use recurring investment features.
+    </p>
+  </div>
+
+  <div class="impact-metrics">
+    <div class="impact-row">
+      <div class="impact-card">
+        <div class="impact-value">+70%</div>
+        <div class="impact-label">Clarity in key steps</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-value">+60%</div>
+        <div class="impact-label">Retention uplift</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-value">16</div>
+        <div class="impact-label">Users tested</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  Designed and coded by Ekaterina Vakhrusheva · 2026
+</footer>
+
+</div>
 </body>
 </html>
