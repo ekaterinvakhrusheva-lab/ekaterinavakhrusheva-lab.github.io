@@ -152,8 +152,14 @@
 <script>
 const cvLink = document.getElementById('download-cv');
 if (cvLink) {
-  cvLink.addEventListener('click', function() {
+  cvLink.addEventListener('click', function(e) {
+    e.preventDefault();
+
     ym(107098618, 'reachGoal', 'download_cv');
+
+    setTimeout(() => {
+      window.open(cvLink.href, '_blank');
+    }, 150);
   });
 }
 
